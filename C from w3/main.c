@@ -1,0 +1,972 @@
+/*
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    printf("Hello world!\n");
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+int main() {
+  int studentID = 15;
+  int studentAge = 23;
+  float studentFee = 75.25;
+  char studentGrade = 'B';
+
+  printf("Student id: %d\n", studentID);
+  printf("Student age: %d\n", studentAge);
+  printf("Student fee: %f\n", studentFee);
+  printf("Student grade: %c", studentGrade);
+
+  return 0;
+}
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+int main() {
+  int length = 4;
+  int width = 6;
+  int area = length * width;;
+
+  printf("Length is: %d\n", length);
+  printf("Width is: %d\n", width);
+  printf("Area of the rectangle is: %d", area);
+
+  return 0;
+}
+
+
+
+
+
+
+
+#include <stdio.h>
+int main() {
+  const int minutesPerHour = 60;
+  const float PI = 3.14;
+
+  printf("%d\n", minutesPerHour);
+  printf("%f\n", PI);
+  return 0;
+}
+
+
+
+
+
+
+
+
+
+int main()
+{
+    int time = 20;
+    (time>18)? printf("Good Day") : printf("Good evening");
+    return 0;
+}
+
+
+
+
+
+
+
+
+#include <stdio.h>
+int main() {
+  int i, j;
+
+  for (i = 1; i <= 2; ++i) {
+    printf("Outer: %d\n", i);
+
+    for (j = 1; j <= 3; ++j) {
+      printf(" Inner: %d\n", j);
+    }
+  }
+
+  return 0;
+}
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int main() {
+  int number = 2;
+  int i;
+  for (i = 1; i <= 10; i++) {
+    printf("%d x %d = %d\n", number, i, number * i);
+  }
+
+  return 0;
+}
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+int main() {
+  int maxScore = 500;
+
+  int userScore = 420;
+
+  float percentage = (float) userScore / maxScore * 100.0;
+
+  printf("User's percentage is %.2f", percentage);
+
+  return 0;
+}
+
+
+
+
+
+
+
+#include <stdio.h>
+int main() {
+  int maxScore = 500;
+
+  int userScore = 420;
+
+  float percentage = (float) userScore / maxScore * 100.0;
+
+  printf("User's percentage is %.2f", percentage);
+
+  return 0;
+}
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int main() {
+  int myAge = 15;
+  int votingAge = 18;
+
+  if (myAge >= votingAge) {
+    printf("Old enough to vote!");
+  } else {
+    printf("Not old enough to vote.");
+  }
+
+  return 0;
+}
+
+
+
+
+
+
+
+
+
+int main() {
+  int doorCode = 1337;
+
+  if (doorCode == 1337) {
+    printf("Correct code.\nThe door is now open.");
+  } else {
+    printf("Wrong code.\nThe door remains closed.");
+  }
+
+  return 0;
+}
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+int main() {
+  int myNum = 10;
+
+  if (myNum > 0) {
+    printf("The value is a positive number.");
+  } else if (myNum < 0) {
+    printf("The value is a negative number.");
+  } else {
+    printf("The value is 0.");
+  }
+
+  return 0;
+}
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+int main() {
+  int dice = 1;
+
+  while (dice <= 6) {
+    if (dice < 6) {
+      printf("No Yatzy\n");
+    } else {
+      printf("Yatzy!\n");
+    }
+    dice = dice + 1;     //OR,    dice = ++dice;   //OR,   ++dice;      SAME ANSWER.  BUT IF WE USE   dice++;   then output will be different like a continuous loop...
+  }
+
+  return 0;
+}
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+int main() {
+  int numbers = 12345;
+
+  int revNumbers = 0;
+
+  while (numbers) {
+    revNumbers = revNumbers * 10 + numbers % 10;
+    numbers /= 10;
+  }
+
+  printf("%d", revNumbers);
+
+  return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+int main() {
+  int numbers = 12345;
+
+  int revNumbers = 0;
+
+  while (numbers) {
+    revNumbers = revNumbers * 10 + numbers % 10;
+    numbers /= 10;
+  }
+
+  printf("%d", revNumbers);
+
+  return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int main() {
+  int countdown = 3;
+
+  while (countdown > 0) {
+    printf("%d\n", countdown);
+    countdown--;
+  }
+
+  printf("Happy New Year!!\n");
+
+  return 0;
+}
+
+
+
+
+
+
+
+
+int main() {
+  int day = 4;
+
+  switch (day) {
+    case 1:
+      printf("Monday");
+      break;
+    case 2:
+      printf("Tuesday");
+      break;
+    case 3:
+      printf("Wednesday");
+      break;
+    case 4:
+      printf("Thursday");
+      break;
+    case 5:
+      printf("Friday");
+      break;
+    case 6:
+      printf("Saturday");
+      break;
+    case 7:
+      printf("Sunday");
+      break;
+  }
+
+  return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+int main() {
+  int i;
+
+  for (i = 0; i < 10; i++) {
+    if (i == 4) {
+      break;
+    }
+    printf("%d\n", i);
+  }
+
+  return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+int main() {
+  int i = 0;
+
+  while (i < 10) {
+    if (i == 4) {
+      i++;
+      continue;
+    }
+    printf("%d\n", i);
+    i++;
+  }
+
+  return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+int main() {
+  int ages[] = {20, 22, 18, 35, 48, 26, 87, 70};
+
+  int length = sizeof(ages) / sizeof(ages[0]);
+
+  int lowestAge = ages[0];
+
+  for (int i = 0; i < length; i++) {
+
+  if (lowestAge > ages[i]) {
+
+      lowestAge = ages[i];
+    }
+  }
+
+  printf("The lowest age in the array is: %d", lowestAge);
+
+  return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+int main() {
+  int matrix[2][3] = { {1, 4, 2}, {3, 6, 8} };
+
+  int i, j;
+  for (i = 0; i < 2; i++) {
+    for (j = 0; j < 3; j++) {
+      printf("%d\n", matrix[i][j]);
+    }
+  }
+
+  return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+  char str1[20] = "Hello ";
+  char str2[] = "World!";
+
+  // Concatenate str2 to str1 (the result is stored in str1)
+  strcat(str1, str2);
+
+  // Print str1
+  printf("%s", str1);
+
+  return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+int myFunction(int x) {
+  return 5 + x;
+}
+
+int main() {
+  printf("Result is: %d", myFunction(3));
+  return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+void myFunction(char name[], int age){
+    printf("Hello %s.\n         Your old is now %d.\n\n", name, age);
+}
+int main(){
+    myFunction("Sam", 29);
+    myFunction("M", 24);
+    myFunction ("Shuvo", 19);
+    return 0;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+void myFunction(int mNum[5]){
+    for(int i=0; i<5; i++){
+        printf("%d\n", mNum[i]);
+    }
+}
+int main(){
+    int mNum[5] = {20, 40, 60, 80, 100};
+    myFunction(mNum);
+    return 0;
+    }
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+float toCelsius(float fahrenheit) {
+  return (5.0 / 9.0) * (fahrenheit - 32.0);
+}
+
+int main() {
+  float f_value = 98.8;
+
+  float result = toCelsius(f_value);
+
+  printf("Fahrenheit: %.2f\n", f_value);
+
+  printf("Convert Fahrenheit to Celsius: %.2f\n", result);
+
+  return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+int sum(int k) {
+  if (k > 0) {
+    return k + sum(k - 1);
+  } else {
+    return 0;
+  }
+}
+
+int main() {
+  int result = sum(10);
+  printf("%d", result);
+  return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+  printf("%f\n", sqrt(16));
+  printf("%f\n", ceil(1.4));
+  printf("%f\n", floor(1.4));
+  printf("%f", pow(4, 3));
+  return 0;
+}
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int main() {
+  FILE *fptr;
+
+  fptr = fopen("filename.txt", "w");
+
+  fclose(fptr);
+
+  return 0;
+}
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+int main() {
+  FILE *fptr;
+
+  fptr = fopen("filename.txt", "w");
+
+  fprintf(fptr, "First writing on created file of mine.");
+
+  fclose(fptr);
+
+  return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int main() {
+  FILE *fptr;
+
+  fptr = fopen("filename.txt", "a");
+
+  fprintf(fptr, "\nHi bro!");
+
+  fclose(fptr);
+
+  return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int main() {
+  FILE *fptr;
+
+  fptr = fopen("filename.txt", "r");
+
+  char myString[100];
+
+  fgets(myString, 100, fptr);
+
+  printf("%s", myString);
+
+  fclose(fptr);
+
+  return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int main() {
+  FILE *fptr;
+
+  fptr = fopen("filename.txt", "r");
+
+  char myString[100];
+
+  while(fgets(myString, 100, fptr)) {
+    printf("%s", myString);
+  }
+
+  fclose(fptr);
+
+  return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int main() {
+  FILE *fptr;
+
+  fptr = fopen("filename.txt", "r");
+
+  char myString[100];
+
+  if(fptr != NULL) {
+    while(fgets(myString, 100, fptr)) {
+      printf("%s", myString);
+    }
+  } else {
+    printf("Not able to open the file.");
+  }
+
+  fclose(fptr);
+
+  return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+struct myStructure {
+  int myNum;
+  char myLetter;
+  char myString[30];
+};
+
+int main() {
+  struct myStructure s1 = {21, 'A', "hey"};
+  struct myStructure s2 = {7, 'B', "Yo"};
+  struct myStructure s3 = {14, 'C', "hola"};
+  struct myStructure s4 = {16, 'D', "hi"};
+
+  printf("%d %c %s", s1.myNum, s1.myLetter, s1.myString);
+  printf("%d %c %s", s2.myNum, s2.myLetter, s2.myString);
+  printf("%d %c %s", s3.myNum, s3.myLetter, s3.myString);
+  printf("%d %c %s", s4.myNum, s4.myLetter, s4.myString);
+
+  return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+struct Car {
+  char brand[50];
+  char model[50];
+  int year;
+};
+
+int main() {
+  struct Car car1  = {"BMW", "X5", 1999};
+  struct Car car2  = {"Ford", "Mustang", 1969};
+  struct Car car3  = {"Toyota", "Corolla", 2011};
+
+  printf("%s %s %d\n", car1.brand, car1.model, car1.year);
+  printf("%s %s %d\n", car2.brand, car2.model, car2.year);
+  printf("%s %s %d\n", car3.brand, car3.model, car3.year);
+
+  return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+enum Level {
+  LOW = 1,
+  MEDIUM,
+  HIGH
+};
+
+int main() {
+  enum Level myVar = MEDIUM;
+
+  switch (myVar) {
+    case 1:
+      printf("Low Level");
+      break;
+    case 2:
+      printf("Medium level");
+      break;
+    case 3:
+      printf("High level");
+      break;
+  }
+
+  return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// finding first and last digit number .. own task practice..
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int n, firstDigit, lastDigit, digits;
+
+    printf("Enter any number: ");
+    scanf("%d", &n);
+
+    lastDigit = n % 10;
+
+    digits = (int)log10(n);
+
+    firstDigit = (int)(n / pow(10, digits));
+
+    printf("First digit = %d\n", firstDigit);
+    printf("Last digit = %d\n", lastDigit);
+
+    return 0;
+}
+
+
+*/
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    printf("Prcaticed all codes from w3 & learned a lot more. Alhamdulillah");
+    return 0;
+}
