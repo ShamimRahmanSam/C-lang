@@ -102,9 +102,8 @@ int func()
     for(x=0; x<50; x++)
     {
         printf("%d\n",x);
-        return x;
     }
-    //return x;
+    return x;
 }
 
 int main()

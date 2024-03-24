@@ -967,6 +967,6 @@ int main()
 #include<stdio.h>
 int main()
 {
-    printf("Prcaticed all codes from w3 & learned a lot more. Alhamdulillah");
+    printf("Prcaticed all codes from w3 & learned a lot more. Alhamdulillah!\nI will practice these codes again to learn more!\n");
     return 0;
 }

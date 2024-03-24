@@ -1,12 +1,7 @@
 # depslib dependency file v1.0
-1711264600 source:e:\c lang coding practice\c from subeen\main.c
+1711283604 source:e:\c lang coding practice\c from subeen\main.c
 	<stdio.h>
 	<stdlib.h>
-	<stdio.h>
-	<stdio.h>
-	<stdio.h>
-	<stdio.h>
-	<stdio.h>
 	<stdio.h>
 	<stdio.h>
 	<stdio.h>
@@ -81,5 +76,6 @@
 	<stdio.h>
 	<stdio.h>
 	<math.h>
+	<stdio.h>
 	<stdio.h>
 

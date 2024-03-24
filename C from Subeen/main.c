@@ -23,12 +23,14 @@ int main()
 
 
 
+
 #include <stdio.h>
 int main()
 {
     printf("Hello World!");
     return 0;
 }
+
 
 
 
@@ -47,6 +49,8 @@ int main()
      printf("total is = %d", s);
      return 0;
  }
+
+
 
 
 
@@ -168,6 +172,8 @@ int main()
       printf("The First Letter of Your Name is : %c\n", ch);
       return 0;
   }
+
+
 
 
 
@@ -1041,6 +1047,9 @@ int main()
 
 
 
+
+
+
 #include<stdio.h>
 int main()
 {
@@ -1053,7 +1062,16 @@ int main()
 
     printf("Celsius : %.2lf\n", C);
     return 0;
-}                           // prob solve 6.1 (Farenheit to celsius by ownself )
+}                   // prob solve: (Farenheit to celsius by ownself )
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1129,6 +1147,7 @@ int main()
     printf("gcd : %d\n", gcd);
     return 0;
 }                   //prob solve 7..... code 5.9 (more efficient)
+
 
 
 
@@ -1280,6 +1299,8 @@ int main()
 
 
 
+
+
 #include <stdio.h>
 int main()
 {
@@ -1348,6 +1369,8 @@ int main() {
 
 
 
+
+
 #include <stdio.h>
 int main()
 {
@@ -1385,6 +1408,10 @@ int main()
 
 
 
+
+
+
+
 #include <stdio.h>
 int main()
     {
@@ -1405,6 +1432,8 @@ int main()
     }
     return 0;
 }                   //code 6.8
+
+
 
 
 
@@ -1449,6 +1478,8 @@ int main()
 
 
 
+
+
 #include <stdio.h>
 int main()
     {
@@ -1482,6 +1513,7 @@ int main()
 
 
 
+
 #include<stdio.h>
 
 int add(double n1, double n2)
@@ -1499,6 +1531,7 @@ int main()
     printf("%.2lf\n", c);
     return 0;
 }                       // code 7.2
+
 
 
 
@@ -1570,6 +1603,9 @@ double add(double n1, double n2)
 
 
 
+
+
+
 #include <stdio.h>
 int test_function(int x)
 {
@@ -1627,6 +1663,7 @@ int main()
 
 
 
+
 #include<stdio.h>
 
 int fmax(int ara[], int n);
@@ -1671,29 +1708,6 @@ int fmax(int ara[], int n)
 
 
 
-#include<stdio.h>
-void test_function(int ara[])
-{
-    ara[0] = 100;
-    //return;       //this return not needed to declare if we use void function
-}
-
-int main()
-{
-    int ara [] = {1, 2, 3, 4, 5};
-    printf("%d\n", ara[0]);
-    test_function(ara);
-    printf("%d\n", ara[0]);
-    return 0;
-}
-
-
-
-
-
-
-
-
 
 
 
@@ -1720,46 +1734,37 @@ int main()
     printf("circle's area : %.2lf\n", a);
 
     return 0;
+}                     // code 7.9 from subeen's book problem solving by ownself ... circle's area prcaticed this code by using function
+
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+void test_function(int ara[])
+{
+    ara[0] = 100;
+    //return;       //this return not needed to declare if we use void function
 }
-                        // code 7.9 problem solving by ownself circle's area prcaticed this code by using function
 
-
-
-
-
-
-
-
-
-
-#include <stdio.h>
 int main()
 {
-    int ara[] = {1, 4, 6, 8, 9, 11, 14, 15, 20, 25, 33, 83, 87, 97, 99, 100};
-    int low_indx = 0;
-    int high_indx = 15;
-    int mid_indx;
-    int num = 97;
-    while (low_indx <= high_indx) {
-        mid_indx = (low_indx + high_indx) / 2;
-        if (num == ara[mid_indx]) {
-            break;
-        }
-        if (num < ara[mid_indx]) {
-            high_indx = mid_indx - 1;
-            }
-            else {
-                low_indx = mid_indx + 1;
-            }
-        }
-        if (low_indx > high_indx) {
-            printf("%d is not in the array\n", num);
-        }
-        else {
-            printf("%d is found in the array. It is the %d th element of the array.\n", ara[mid_indx], mid_indx);
-        }
-        return 0;
-}                   // code 8.1 fom binary search... this is copied from the book. there's some issue cause it's showing error
+    int ara [] = {1, 2, 3, 4, 5};
+    printf("%d\n", ara[0]);
+    test_function(ara);
+    printf("%d\n", ara[0]);
+    return 0;
+}
+
+
+
+
 
 
 
@@ -1812,6 +1817,11 @@ int main()
 
 
 
+
+
+
+
+
 #include <stdio.h>
 int string_length(char str[])
 {
@@ -1832,6 +1842,12 @@ int main()
     }
     return 0;
 }                   //code 9.5
+
+
+
+
+
+
 
 
 
@@ -1890,7 +1906,15 @@ int main()
      y = func();
      printf("%d\n", y);
      return 0;
- }                      // suddent task by shibbir bhai
+ }                      // suddent instant task by shibbir bhai
+
+
+
+
+
+
+
+
 
 
 
@@ -2127,7 +2151,7 @@ int main()
 
 
 
-*/
+
 
 
 
@@ -2147,6 +2171,56 @@ int main()
     }
     return 0;
 }               //code 11.1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
+
+
+#include <stdio.h>
+int main()
+{
+    int namta[10][10];
+    int row, col;
+    for (row = 0; row < 10; row++)
+        {
+            for(col = 0; col < 10; col++)
+            {
+                namta[row][col] = (row + 1) * (col + 1);
+            }
+        }
+
+    for (row = 0; row < 10; row++)
+    {
+        for(col = 0; col < 10; col++)
+        {
+            printf("%d x %d = %d\n", (row + 1), (col + 1), namta[row][col]);
+        }
+        printf("\n");
+    }
+    return 0;
+}                       //code 11.2
+
+
+
+
+
+
+
+
+
+
 
 
 
