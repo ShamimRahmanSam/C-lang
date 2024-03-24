@@ -21,12 +21,16 @@ int main()
 
 
 
+
+
 #include <stdio.h>
 int main()
 {
     printf("Hello World!");
     return 0;
 }
+
+
 
 
 
@@ -52,6 +56,8 @@ int main()
 
 
 
+
+
 #include <stdio.h>
 int main()
 {
@@ -60,6 +66,8 @@ int main()
     printf("%d + %d = %d", a, b, sum);
     return 0;
 }
+
+
 
 
 
@@ -150,6 +158,7 @@ int main()
 
 
 
+
   #include<stdio.h>
   int main()
   {
@@ -159,6 +168,10 @@ int main()
       printf("The First Letter of Your Name is : %c\n", ch);
       return 0;
   }
+
+
+
+
 
 
 
@@ -201,6 +214,7 @@ int main()
     printf("%d / %d = %d\n", num1, num2, num1/num2);
     return 0;
 }
+
 
 
 
@@ -310,6 +324,10 @@ int main()
 
 
 
+
+
+
+
 #include <stdio.h>
 int main()
 {
@@ -322,7 +340,6 @@ int main()
     }
     return 0;
 }
-
 
 
 
@@ -355,8 +372,6 @@ int main()
 
 
 
-
-
 #include<stdio.h>
 int main()
 {
@@ -365,6 +380,8 @@ int main()
     printf("%d", n);    // the output will be 2
     return 0;
 }
+
+
 
 
 
@@ -847,9 +864,6 @@ int main()
 
 
 
-
-
-
 #include<stdio.h>
 int main()
 {
@@ -870,9 +884,6 @@ int main()
     printf("Total Amount is %.2lf\nMonthly Amount is %.2lf", total_amount, monthly_amount);
     return 0;
 }                           // problem solving 3.  code 5.4
-
-
-
 
 
 
@@ -924,7 +935,6 @@ int main()
 
 
 
-
 #include<stdio.h>
 
 int main()
@@ -945,7 +955,7 @@ int main()
 
     printf("2t = %.2lf\n", ans);
     return 0;
-}               #problem solving 4...... done by me..Alhamdulillah!
+}               #problem solving 4...... done by me.
 
 
 
@@ -1129,6 +1139,8 @@ int main()
 
 
 
+
+
 #include<stdio.h>
 
 int main() {
@@ -1163,27 +1175,6 @@ int main() {
 
 
 
-
-
-
-
-
-
-#include<stdio.h>
-int main()
-{
-    int i = 0;
-
-    for(i=0;i<10;i++)
-    {
-        printf("%d\n", i);          // output 0-9
-        //break;       // by using break the utput will be only 0
-        //return 0;    // by using return 0 here then it will give us the output of this condition only. it will not give the last printf result which is outside of this loop.
-    }
-    printf("%d\n", i);  //output 10
-    return 0;               // by using break the output ill be 0 for this and for both printf the output will be 0 0
-    // by both print the output will be 0-10
-}                               // interview ques . basic by shakib bhai
 
 
 
@@ -1321,32 +1312,6 @@ int main()
 
 
 
-#include <stdio.h>
-int main()
-{
-    int ara[] = {10, 20, 30, 40, 50, 60, 70, 80, 90, 100};
-    int i, j, temp;
-
-    for(i = 0, j = 9; i < 10; i++, j--)
-        {
-        temp = ara[j];
-        ara[j] = ara[i];
-        ara[i] = temp;
-        }
-        for(i = 0; i < 10; i++)
-        {
-        printf("%dth element is : %d\n", i, ara[i]);
-        }
-    return 0;
-}               //code 6.6 .. need correction
-
-
-
-
-
-
-
-
 
 
 
@@ -1359,7 +1324,6 @@ void reverseArrayExtraArray(int arr[], int size) {
         reversedArr[i] = arr[size - i - 1];
     }
 
-    // Print reversed array
     printf("Reversed Array: ");
     for (int i = 0; i < size; i++) {
         printf("%d ", reversedArr[i]);
@@ -1375,31 +1339,6 @@ int main() {
     return 0;
 }                        // reversed array code taken from geekfromgeek
 
-
-
-
-
-
-
-
-#include <stdio.h>
-int main()
-{
-    int ara[] = {10, 20, 30, 40, 50, 60, 70, 80, 90, 100};
-    int i, j, temp;
-
-    for(i = 0, j = 9; i < 10; i++, j--)
-        {
-        temp = ara[j];
-        //ara[j] = ara[i];
-        ara[i] = temp;
-        }
-        for(i = 0; i < 10; i++)
-        {
-        printf("%dth element is : %d\n", i, ara[i]);
-        }
-    return 0;
-}               //code 6.6 .. need correction.. half proble solved . 0th-4th element solved by me. other still having issues;
 
 
 
@@ -1731,48 +1670,6 @@ int fmax(int ara[], int n)
 
 
 
-#include<stdio.h>
-
-int fmin(int ara[], int n);
-
-int main()
-{
-    int ara[] = {-100, 0, 53, 22, 83, 23, 89, -132, 201, 3, 85};
-    int n = 11;
-    int min = fmin(ara,n);
-
-    printf("%d\n", min);
-    return 0;
-}
-
-
-int fmin(int ara[], int n)
-{
-    int min = ara[0];
-
-    int i;
-
-    for(i=0; i>n; i--)
-    {
-        if(ara[i]<min)
-        {
-            min = ara[i];
-        }
-    }
-    return min;
-}                               // code 7.7  min version but maybe needed some correcton. cause the out[put is -100 but it should be -132.. there's a problem in condition
-                                //  need to do code for find sum, find average in free time
-
-
-
-
-
-
-
-
-
-
-
 
 #include<stdio.h>
 void test_function(int ara[])
@@ -1876,12 +1773,10 @@ int main()
 #include <stdio.h>
 int main()
 {
- char country[] = {'B', 'a', 'n', 'g', 'l', 'a', 'd', 'e', 's', 'h', ' ', 'i', 's', ' ', 'm', 'y',
-' ', 'c', 'o', 'u', 'n', 't', 'r', 'y', '.'};
- printf("%s\n", country);
- return 0;   // in string if we use like that{...} then we don't ned to ue return as compiler pick } it as string ended. an if we use '\0' in between then the string will be en there.
+    char country[] = {'B', 'a', 'n', 'g', 'l', 'a', 'd', 'e', 's', 'h', ' ', 'i', 's', ' ', 'm', 'y', ' ', 'c', 'o', 'u', 'n', 't', 'r', 'y', '.'};
+    printf("%s\n", country);
+    return 0;   // in string if we use like that{...} then we don't ned to ue return as compiler pick } it as string ended. an if we use '\0' in between then the string will be end there.
 }
-
 
 
 
@@ -2237,10 +2132,21 @@ int main()
 
 
 
+#include<stdio.h>
+int main()
+{
+   int marks[4][10] = {{80, 70, 92, 78, 58, 83, 85, 66, 99, 81}, {75, 67,
+55, 100, 91, 84, 79, 61, 90, 97}, {98, 67, 75, 89, 81, 83, 80, 90, 88, 77},
+{0, 0, 0, 0, 0, 0, 0, 0, 0, 0}};
+    int col;
 
-
-
-
+    for(col=0;col<10;col++)
+    {
+        marks[3][col] = marks[0][col] / 4.0 + marks[1][col] / 4.0 + marks[2][col] / 2.0;
+        printf("Roll NO: %d Total Marks: %d\n", col+1, marks[3][col]);
+    }
+    return 0;
+}               //code 11.1
 
 
 
