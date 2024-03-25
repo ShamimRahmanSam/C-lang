@@ -1,5 +1,6 @@
 # depslib dependency file v1.0
-1711198809 source:e:\c lang coding practice\office tasks\taskbytareqbhai\main.c
+1711339278 source:e:\c lang coding practice\office tasks\taskbytareqbhai\main.c
+	<stdio.h>
 	<stdio.h>
 	<stdio.h>
 

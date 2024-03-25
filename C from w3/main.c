@@ -954,6 +954,70 @@ int main()
 }
 
 
+
+
+
+
+
+
+
+// practice done all w3 codes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//practice again  (from subeen's book
+
+
+
+#include <stdio.h>
+int main()
+{
+ int a;
+ a = 1000;
+ printf("Value of a is %d\n", a);
+ a = -21000;
+ printf("Value of a is %d\n", a);
+ a = 10000000;
+ printf("Value of a is %d\n", a);
+ a = -10000000;
+ printf("Value of a is %d\n", a);
+ a = 100020004000503;
+ printf("Value of a is %d\n", a);
+ a = -4325987632;
+ printf("Value of a is %d\n", a);
+ return 0;
+}
+
+
+
+
+
+
+
+
+
+
 */
 
 
@@ -963,10 +1027,14 @@ int main()
 
 
 
-
-#include<stdio.h>
+#include <stdio.h>
 int main()
 {
-    printf("Prcaticed all codes from w3 & learned a lot more. Alhamdulillah!\nI will practice these codes again to learn more!\n");
-    return 0;
+ char ch;
+ printf("Enter the first letter of your name: ");
+ ch = getchar();     // getchar()  instead of   scanf("%c", &ch);
+ printf("The first letter of your name is: %c\n", ch);
+ return 0;
 }
+
+
