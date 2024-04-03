@@ -1,5 +1,4 @@
 /*
-
 // Tasks by Shakib Bhai
 // Date : 25-03-24
 
@@ -79,13 +78,11 @@ int main()
 
 
 
+
+
+
+
 */
-
-
-
-
-
-
 
 
 
@@ -104,12 +101,12 @@ int main()
     {
         for (j = 1; j < m; j++)
         {
-            printf("  ");
+            printf(" ");
         }
 
         for (k = 1; k <= (2 * i - 1); k++)
         {
-            printf("%d ", k);
+            printf("%d", k);
         }
         m++;
 

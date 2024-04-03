@@ -1746,6 +1746,111 @@ int main()
 
 
 
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int main() {
+    int ara[] = {1, 4, 6, 8, 9, 11, 14, 15, 20, 25, 33, 83, 87, 97, 99, 100};
+    int low_indx = 0;
+    int high_indx = 15;
+    int mid_indx;
+    int num = 97;
+
+    while (low_indx <= high_indx) {
+        mid_indx = (low_indx + high_indx) / 2;
+
+        if (num == ara[mid_indx]) {
+            break;
+        }
+
+        if (num < ara[mid_indx]) {
+            high_indx = mid_indx - 1;
+        } else {
+            low_indx = mid_indx + 1;
+        }
+    }
+
+    if (low_indx > high_indx) {
+        printf("%d is not in the array\n", num);
+    } else {
+        printf("%d is found in the array. It is the %dth element of the array.\n", ara[mid_indx], mid_indx);
+    }
+
+    return 0;               // code 8.1 by while loop
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int main() {
+    int ara[] = {1, 4, 6, 8, 9, 11, 14, 15, 20, 25, 33, 83, 87, 97, 99, 100};
+    int low_indx = 0;
+    int high_indx = 15;
+    int mid_indx;
+    int num = 97;
+
+    for (; low_indx <= high_indx; ) {
+        mid_indx = (low_indx + high_indx) / 2;
+        if (num == ara[mid_indx]) {
+            break;
+        }
+        if (num < ara[mid_indx]) {
+            high_indx = mid_indx - 1;
+        } else {
+            low_indx = mid_indx + 1;
+        }
+    }
+
+    if (low_indx > high_indx) {
+        printf("%d is not in the array\n", num);
+    } else {
+        printf("%d is found in the array. It is the %dth element of the array.\n", ara[mid_indx], mid_indx);
+    }
+
+    return 0;
+}                       // code 8.1 (using for loop instead of while loop
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #include<stdio.h>
 void test_function(int ara[])
 {
@@ -2185,7 +2290,6 @@ int main()
 
 
 
-*/
 
 
 #include <stdio.h>
@@ -2216,6 +2320,213 @@ int main()
 
 
 
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+int main()
+{
+    char saarc[7][100] = {"Bangladesh", "India", "Pakistan", "Sri Lanka", "Nepal", "Bhutan", "Maldives"};
+    int row;
+    for (row = 0; row < 7; row++)
+        {
+            printf("%s\n", saarc[row]);
+        }
+    return 0;               // code 11.3
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    char saarc[7][100] = {"Bangladesh", "India", "Pakistan", "Sri Lanka", "Nepal", "Bhutan", "Maldives"};
+    int row, col, name_length;
+    for (row = 0; row < 7; row++)
+        {
+            name_length = strlen(saarc[row]);
+            for(col = 0; col < name_length; col++)
+            {
+                printf("%c ", saarc[row][col]);
+            }
+    printf("\n");
+    }
+    return 0;
+                        // code 11.4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    char saarc[7][100] = {"Bangladesh", "India", "Pakistan", "Sri Lanka", "Nepal", "Bhutan", "Maldives"};
+    int row, col, name_length;
+    for (row = 0; row < 7; row++)
+        {
+            name_length = strlen(saarc[row]);
+            for(col = 0; col < name_length; col++)
+            {
+                printf("(%d, %d) = %c, ", row, col, saarc[row][col]);
+            }
+        printf("\n");
+    }
+    return 0;
+}                               // code 11.5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    int m,n;
+    printf("Enter the number of rows and column\n");
+    scanf("%d %d",&m,&n);
+    int arr[m][n];
+    printf("Enter the elements of the matrix\n");
+    for(int i=0;i<m;i++)
+    {
+        for(int j=0;j<n;j++)
+        {
+            scanf("%d",&arr[i][j]);
+        }
+    }
+    printf("\nElements in the matrix are \n");
+    for(int i=0;i<m;i++)
+   {
+        for(int j=0;j<n;j++)
+        {
+            printf("%d ",arr[i][j]);
+        }
+        printf("\n");
+    }
+    printf("\nRow Sum....\n");
+    for(int i=0;i<m;i++)
+    {
+        int rsum=0;
+        for(int j=0;j<n;j++)
+        {
+            rsum=rsum+arr[i][j];
+        }
+        printf("\nSum of all the elements in row %d is %d\n",i,rsum);
+    }
+    printf("\nColumn Sum....\n");
+    for(int i=0;i<m;i++)
+    {
+        int csum=0;
+        for(int j=0;j<n;j++)
+        {
+            csum=csum+arr[j][i];
+        }
+        printf("\nSum of all the elements in column %d is %d\n",i,csum);
+    }
+    return 0;
+}                       // 11.6.0 by ownself
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    int ara1[5][5] = {{1, 2, 3, 4, 5}, {10, 20, 30, 40, 50}, {100, 200, 300, 400, 500}, {1000, 2000, 3000, 4000, 5000}, {10000, 20000, 30000, 40000, 50000}};
+    int ara2[5][5];
+    int r, c;
+    printf("Content of first array (ara1): \n");
+    for (r = 0; r < 5; r++)
+        {
+            for(c = 0; c < 5; c++)
+            {
+                printf("%d ", ara1[r][c]);
+                ara2[c][r] = ara1[r][c];
+            }
+        printf("\n");
+        }
+    printf("\n");
+
+    printf("Content of second array (ara2): \n");
+    for (r = 0; r < 5; r++)
+        {
+            for(c = 0; c < 5; c++)
+                {
+                    printf("%d ", ara2[r][c]);
+                }
+            printf("\n");
+        }
+
+    return 0;
+}                   // code 11.6
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
 
 
 

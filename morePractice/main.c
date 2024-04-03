@@ -385,11 +385,6 @@ int main()
 
 
 
-*/
-
-
-
-
 
 
 
@@ -447,6 +442,367 @@ int main()
 
 
 
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int n=14;
+    if(n%2==0)
+    {
+        printf("even\n");
+    }
+    else
+    {
+        printf("odd\n");
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+int main()
+{
+    int n = 0;
+    while (n < 10)
+        {
+            n++;
+            if (n % 2 == 0)
+            {
+                continue;
+            }
+    printf("%d\n", n);
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int a,b,c;
+    for(a=1;a<=3;a++)
+    {
+        for(b=1;b<=3;b++)
+        {
+            if(b!=a)
+            {
+                for(c=1;c<=3;c++)
+                {
+                    if(c!=b && c!=a)
+                        {
+                            printf("%d, %d, %d\n",a,b,c);
+                        }
+                }
+            }
+        }
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int a,b,c;
+    for(a=1;a<=3;a++)
+    {
+        for(b=1;b<=3;b++)
+        {
+            for(c=1;c<=3;c++)
+            {
+                if(b!=a && c!=b && c!=a)
+                {
+                    printf("%d, %d, %d\n", a, b, c);
+                }
+            }
+        }
+    }
+    return 0;
+}
+//less run time
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int n=1;
+    while(n<=100)
+    {
+        printf("%d\n", n);
+        n++;
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int x=1;
+    while(x<=100)
+    {
+        printf("%d\n", x);
+        x++;
+        if(x>10)
+        {
+            break;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int x;
+    for(x=1;x<=100;x++)
+    {
+
+        if(x%2==0)
+        {
+            continue;
+        }
+        printf("%d\n", x);
+
+    }
+    return 0;  //output will be 1-100 (odd numbers)
+}
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int n=5,i,c;
+    for(i=1;i<=10;i++)
+    {
+        c =n*i;
+        printf("%d x %d = %d\n", n,i,c);
+    }
+    return 0;
+}
+// 5's namta
+
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int i,j,k;
+    for(i=1;i<=20;i++)
+    {
+        for(j=1;j<=10;j++)
+        {
+            k = i*j;
+            printf("%d x %d = %d\n", i, j, k);
+        }
+    }
+    return 0;
+} // namta 1-20
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// finding first and last digit number .. own task practice..
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int n, firstDigit, lastDigit, digits;
+
+    printf("Enter any number: ");
+    scanf("%d", &n);
+
+    lastDigit = n % 10;
+
+    digits = (int)log10(n);
+
+    firstDigit = (int)(n / pow(10, digits));
+
+    printf("First digit = %d\n", firstDigit);
+    printf("Last digit = %d\n", lastDigit);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <math.h>
+#include <stdio.h>
+
+int main() {
+    double base, exp, result;
+    printf("Enter a base number: ");
+    scanf("%lf", &base);
+    printf("Enter an exponent: ");
+    scanf("%lf", &exp);
+
+    // calculates the power
+    result = pow(base, exp);
+
+    printf("%.1lf^%.1lf = %.2lf", base, exp, result);
+    return 0;
+}                   // USING POW FROM MATH.H TO GET THE EXPONENT OF A NUMBER . LIKE 3TO THE POWER 4 = 81
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int x,y,p,m;
+    p=15, m=5;
+    x=(p+m)/2;
+    y=(p-m)/2;
+    printf("x=%d, y=%d",x,y);
+    return 0;
+}                  //prob solve 5.1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
 
 
 

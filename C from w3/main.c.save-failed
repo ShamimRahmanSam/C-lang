@@ -889,8 +889,6 @@ int main() {
 
 
 
-*/
-
 
 
 #include <stdio.h>
@@ -922,6 +920,47 @@ int main() {
 
 
 
+
+
+
+
+
+
+
+
+
+// finding first and last digit number .. own task practice..
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int n, firstDigit, lastDigit, digits;
+
+    printf("Enter any number: ");
+    scanf("%d", &n);
+
+    lastDigit = n % 10;
+
+    digits = (int)log10(n);
+
+    firstDigit = (int)(n / pow(10, digits));
+
+    printf("First digit = %d\n", firstDigit);
+    printf("Last digit = %d\n", lastDigit);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
 // practice done all w3 codes
 
 
@@ -947,9 +986,55 @@ int main() {
 
 
 
+//practice again  (from subeen's book
+
+
+
+#include <stdio.h>
+int main()
+{
+ int a;
+ a = 1000;
+ printf("Value of a is %d\n", a);
+ a = -21000;
+ printf("Value of a is %d\n", a);
+ a = 10000000;
+ printf("Value of a is %d\n", a);
+ a = -10000000;
+ printf("Value of a is %d\n", a);
+ a = 100020004000503;
+ printf("Value of a is %d\n", a);
+ a = -4325987632;
+ printf("Value of a is %d\n", a);
+ return 0;
+}
 
 
 
 
+
+
+
+
+
+
+
+
+*/
+
+
+
+
+
+
+#include <stdio.h>
+int main()
+{
+ char ch;
+ printf("Enter the first letter of your name: ");
+ ch = getchar();     // getchar()  instead of   scanf("%c", &ch);
+ printf("The first letter of your name is: %c\n", ch);
+ return 0;
+}
 
 
