@@ -1,11 +1,21 @@
 # depslib dependency file v1.0
-1712069282 source:e:\c lang coding practice\beecrowdprobsolving\main.c
+1712226480 source:e:\c lang coding practice\beecrowdprobsolving\main.c
 	<stdio.h>
 	<stdio.h>
 	<stdio.h>
 	<stdio.h>
 	<stdio.h>
 	<stdio.h>
+	<stdio.h>
+	<stdio.h>
+	<stdio.h>
+	<stdio.h>
+	<stdio.h>
+	<stdio.h>
+	<stdio.h>
+	<stdio.h>
+	<stdio.h>
+	<math.h>
 	<stdio.h>
 	<stdio.h>
 	<stdio.h>
