@@ -594,7 +594,7 @@ int main()
     printf("%d moeda(s) de R$ 0.01\n",m/1);
 
     return 0;
-}                           // prob bee Banknotes and coins
+}                           // prob bee 1021 Banknotes and coins
 
 
 
@@ -679,8 +679,6 @@ int main()
 
 
 
-*/
-
 
 
 
@@ -726,3 +724,383 @@ int main()
 
 
 
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int X, Y;
+    float price = 0;
+
+    scanf("%d %d", &X, &Y);
+
+    if (X == 1)
+    {
+        price  = (float) (4.00 * Y);
+    }
+
+    else if (X == 2)
+    {
+        price  = (float) (4.50 * Y);
+    }
+
+    else if (X == 3)
+    {
+        price  = (float) (5.00 * Y);
+    }
+
+    else if (X == 4)
+    {
+        price  = (float) (2.00 * Y);
+    }
+
+    else if (X == 5)
+    {
+        price  = (float) (1.50 * Y);
+    }
+
+    printf("Total: R$ %.2f\n",price);
+
+    return 0;
+}               // prob bee 1038 Snack
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+int main()
+{
+    double first, second, third, fourth, last, sum;
+    scanf("%lf %lf %lf %lf", &first, &second, &third, &fourth);
+    sum = (first * 2 + second * 3 + third * 4 + fourth) / (2+3+4+1);
+    printf("Media: %.1f\n", sum);
+    if (sum >= 7.0){
+        printf("Aluno aprovado.\n");
+    }
+    else if (sum >= 5.0)
+    {
+        printf("Aluno em exame.\n");
+        scanf("%lf", &last);
+        printf("Nota do exame: %.1f\n", last);
+        if (last + sum / 2.0 > 5.0){
+            printf("Aluno aprovado.\n");
+        }
+        else{
+            printf("Aluno reprovado.\n");
+        }
+        printf("Media final: %.1f\n", (last + sum ) / 2.0);
+    }
+    else{
+        printf("Aluno reprovado.\n");
+    }
+    return 0;
+}             // prob bee 1040	Average 3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+int main()
+{
+    double X,Y;
+    scanf ("%lf%lf", &X, &Y);
+
+    if (X + Y == 0) printf("Origem\n");
+    else if (X == 0) printf("Eixo Y\n");
+    else if (Y == 0) printf("Eixo X\n");
+    else if (X>0 && Y>0) printf("Q1\n");
+    else if (X<0 && Y>0) printf("Q2\n");
+    else if (X<0 && Y<0) printf("Q3\n");
+    else if (X>0 && Y<0) printf("Q4\n");
+    return 0;
+}          // prob bee 1041 Coordinates of a Point
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+
+int main(){
+    int a,b,c,aux;
+    int v[3];
+
+    scanf("%d %d %d", &a, &b, &c);
+    v[0] = a;
+    v[1] = b;
+    v[2] = c;
+
+    for(int i = 0; i < 3; i++){
+            for(int j = 0; j < 3; j++){
+                    if(v[i] < v[j]){
+                            aux = v[j];
+                            v[j] = v[i];
+                            v[i] = aux;
+                    }
+            }
+    }
+
+    printf("%d\n%d\n%d\n", v[0], v[1], v[2]);
+    printf("\n%d\n%d\n%d\n", a, b, c);
+    return 0;
+}               // prob bee 1042 simple sort
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    float a,b,c,perimeter,area;
+    scanf("%f%f%f",&a,&b,&c);
+
+    if((a+b)>c&&(b+c)>a&&(c+a)>b){
+        perimeter=a+b+c;
+        printf("Perimetro = %.1f\n",perimeter);
+    }
+    else{
+        area=.5*(a+b)*c;
+        printf("Area = %.1f\n",area);
+    }
+    return 0;
+}             // prob bee 1043	Triangle
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int A, B;
+    scanf("%d %d", &A, &B);
+    if (B % A == 0 || A % B == 0)
+    {
+        printf("Sao Multiplos\n");
+    }
+    else
+    {
+        printf("Nao sao Multiplos\n");
+    }
+    return 0;
+}              // prob bee 1044 Multiples
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int main(){
+    double a,b,c;
+
+    scanf("%lf %lf %lf", &a, &b, &c);
+
+    if(a >= (b+c) || b >= (a+c) || c >= (a+b))
+         printf("NAO FORMA TRIANGULO\n");
+    else if(a*a == (b*b + c*c) || b*b == (a*a + c*c) || c*c == (a*a + b*b))
+           printf("TRIANGULO RETANGULO\n");
+    else if(a*a > (b*b + c*c) || b*b > (a*a + c*c) || c*c > (a*a + b*b))
+           printf("TRIANGULO OBTUSANGULO\n");
+    else if(a*a < (b*b + c*c) || b*b < (a*a + c*c) || c*c < (a*a + b*b))
+           printf("TRIANGULO ACUTANGULO\n");
+    if(a == b && a == c)
+            printf("TRIANGULO EQUILATERO\n");
+    if((a == b && a != c)  || (a == c && a != b) || (b == c && b != a))
+            printf("TRIANGULO ISOSCELES\n");
+
+    return 0;
+
+}                   // prob bee 1045 Triangle Types
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+int main()
+{
+    int a,b;
+    scanf ("%d%d", &a, &b);
+    if(a==b)
+        printf("O JOGO DUROU %d HORA(S)\n",24-a+b);
+    else if(a<=b)
+        printf ("O JOGO DUROU %d HORA(S)\n",b-a);
+    else
+        printf("O JOGO DUROU %d HORA(S)\n",24-a+b);
+    return 0;
+}               // prob bee 1046 game time
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+int main()
+{
+    int a, b, c, d;
+    int dif;
+    scanf("%d %d %d %d", &a, &c, &b, &d);
+    dif = ((b*60)+d) - ((a*60)+c);
+    if(dif<=0) dif += 24*60;
+    printf("O JOGO DUROU %d HORA(S) E %d MINUTO(S)\n", dif/60, dif%60);
+    return 0;
+}               // prob bee 1047 Game Time with Minutes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+
+int main()
+{
+    float s;
+
+    scanf("%f",&s);
+
+    if(s>0 && s<=400.0)
+        printf("Novo salario: %.2f\nReajuste ganho: %.2f\nEm percentual: 15 %%\n",(s+(s*.15)),(s*.15));
+    else if(s<=800.0)
+        printf("Novo salario: %.2f\nReajuste ganho: %.2f\nEm percentual: 12 %%\n",(s+(s*.12)),(s*.12));
+    else if(s<=1200.0)
+        printf("Novo salario: %.2f\nReajuste ganho: %.2f\nEm percentual: 10 %%\n",(s+(s*.10)),(s*.10));
+    else if(s<=2000.0)
+        printf("Novo salario: %.2f\nReajuste ganho: %.2f\nEm percentual: 7 %%\n",(s+(s*.07)),(s*.07));
+    else
+        printf("Novo salario: %.2f\nReajuste ganho: %.2f\nEm percentual: 4 %%\n",(s+(s*.04)),(s*.04));
+    return 0;
+}             // prob bee 1048 Salary increase
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
+
+#include <stdio.h>
+
+int main()
+{
+    char a[15];
+    char b[15];
+    char c[15];
+    scanf("%s", a);
+    scanf("%s", b);
+    scanf("%s", c);
+
+    if (a[0] == 'v' && b[0] == 'a' && c[0] == 'c')printf("aguia\n");
+    if (a[0] == 'v' && b[0] == 'a' && c[0] == 'o')printf("pomba\n");
+    if (a[0] == 'v' && b[0] == 'm' && c[0] == 'o')printf("homem\n");
+    if (a[0] == 'v' && b[0] == 'm' && c[0] == 'h')printf("vaca\n");
+    if (a[0] == 'i' && b[0] == 'i' && c[2] == 'm')printf("pulga\n");
+    if (a[0] == 'i' && b[0] == 'i' && c[2] == 'r')printf("lagarta\n");
+    if (a[0] == 'i' && b[0] == 'a' && c[0] == 'h')printf("sanguessuga\n");
+    if (a[0] == 'i' && b[0] == 'a' && c[0] == 'o')printf("minhoca\n");
+
+    return 0;
+}
