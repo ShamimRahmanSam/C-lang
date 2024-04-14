@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1712771261 source:e:\c lang coding practice\beecrowdprobsolving\main.c
+1713120615 source:e:\c lang coding practice\beecrowdprobsolving\main.c
 	<stdio.h>
 	<stdio.h>
 	<stdio.h>
@@ -26,6 +26,12 @@
 	<stdio.h>
 	<stdio.h>
 	<math.h>
+	<stdio.h>
+	<stdio.h>
+	<stdio.h>
+	<stdio.h>
+	<stdio.h>
+	<stdio.h>
 	<stdio.h>
 	<stdio.h>
 	<stdio.h>

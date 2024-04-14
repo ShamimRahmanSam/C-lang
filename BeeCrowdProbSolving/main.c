@@ -783,25 +783,35 @@ int main()
 {
     double first, second, third, fourth, last, sum;
     scanf("%lf %lf %lf %lf", &first, &second, &third, &fourth);
+
     sum = (first * 2 + second * 3 + third * 4 + fourth) / (2+3+4+1);
     printf("Media: %.1f\n", sum);
-    if (sum >= 7.0){
-        printf("Aluno aprovado.\n");
-    }
-    else if (sum >= 5.0)
-    {
-        printf("Aluno em exame.\n");
-        scanf("%lf", &last);
-        printf("Nota do exame: %.1f\n", last);
-        if (last + sum / 2.0 > 5.0){
+
+    if (sum >= 7.0)
+        {
             printf("Aluno aprovado.\n");
         }
-        else{
-            printf("Aluno reprovado.\n");
+
+        else if (sum >= 5.0)
+        {
+            printf("Aluno em exame.\n");
+            scanf("%lf", &last);
+            printf("Nota do exame: %.1f\n", last);
+
+            if (last + sum / 2.0 > 5.0)
+            {
+                printf("Aluno aprovado.\n");
+            }
+
+            else
+            {
+                printf("Aluno reprovado.\n");
+            }
+            printf("Media final: %.1f\n", (last + sum ) / 2.0);
         }
-        printf("Media final: %.1f\n", (last + sum ) / 2.0);
-    }
-    else{
+
+    else
+    {
         printf("Aluno reprovado.\n");
     }
     return 0;
@@ -829,13 +839,35 @@ int main()
     double X,Y;
     scanf ("%lf%lf", &X, &Y);
 
-    if (X + Y == 0) printf("Origem\n");
-    else if (X == 0) printf("Eixo Y\n");
-    else if (Y == 0) printf("Eixo X\n");
-    else if (X>0 && Y>0) printf("Q1\n");
-    else if (X<0 && Y>0) printf("Q2\n");
-    else if (X<0 && Y<0) printf("Q3\n");
-    else if (X>0 && Y<0) printf("Q4\n");
+    if (X + Y == 0)
+        {
+            printf("Origem\n");
+        }
+    else if (X == 0)
+        {
+            printf("Eixo Y\n");
+        }
+    else if (Y == 0)
+        {
+            printf("Eixo X\n");
+        }
+    else if (X>0 && Y>0)
+        {
+            printf("Q1\n");
+        }
+    else if (X<0 && Y>0)
+        {
+            printf("Q2\n");
+        }
+    else if (X<0 && Y<0)
+        {
+            printf("Q3\n");
+        }
+    else if (X>0 && Y<0)
+        {
+            printf("Q4\n");
+        }
+
     return 0;
 }          // prob bee 1041 Coordinates of a Point
 
@@ -854,7 +886,7 @@ int main()
 #include<stdio.h>
 
 int main(){
-    int a,b,c,aux;
+    int a,b,c,x;
     int v[3];
 
     scanf("%d %d %d", &a, &b, &c);
@@ -862,15 +894,18 @@ int main(){
     v[1] = b;
     v[2] = c;
 
-    for(int i = 0; i < 3; i++){
-            for(int j = 0; j < 3; j++){
-                    if(v[i] < v[j]){
-                            aux = v[j];
-                            v[j] = v[i];
-                            v[i] = aux;
-                    }
+    for(int i = 0; i < 3; i++)
+        {
+            for(int j = 0; j < 3; j++)
+            {
+                if(v[i] < v[j])
+                {
+                    x = v[j];
+                    v[j] = v[i];
+                    v[i] = x;
+                }
             }
-    }
+        }
 
     printf("%d\n%d\n%d\n", v[0], v[1], v[2]);
     printf("\n%d\n%d\n%d\n", a, b, c);
@@ -960,20 +995,31 @@ int main(){
     scanf("%lf %lf %lf", &a, &b, &c);
 
     if(a >= (b+c) || b >= (a+c) || c >= (a+b))
+    {
          printf("NAO FORMA TRIANGULO\n");
+    }
     else if(a*a == (b*b + c*c) || b*b == (a*a + c*c) || c*c == (a*a + b*b))
-           printf("TRIANGULO RETANGULO\n");
+    {
+        printf("TRIANGULO RETANGULO\n");
+    }
     else if(a*a > (b*b + c*c) || b*b > (a*a + c*c) || c*c > (a*a + b*b))
-           printf("TRIANGULO OBTUSANGULO\n");
+    {
+        printf("TRIANGULO OBTUSANGULO\n");
+    }
     else if(a*a < (b*b + c*c) || b*b < (a*a + c*c) || c*c < (a*a + b*b))
-           printf("TRIANGULO ACUTANGULO\n");
-    if(a == b && a == c)
-            printf("TRIANGULO EQUILATERO\n");
-    if((a == b && a != c)  || (a == c && a != b) || (b == c && b != a))
-            printf("TRIANGULO ISOSCELES\n");
+    {
+        printf("TRIANGULO ACUTANGULO\n");
+    }
 
+    else if(a == b && a == c)
+    {
+        printf("TRIANGULO EQUILATERO\n");
+    }
+    else if((a == b && a != c)  || (a == c && a != b) || (b == c && b != a))
+    {
+        printf("TRIANGULO ISOSCELES\n");
+    }
     return 0;
-
 }                   // prob bee 1045 Triangle Types
 
 
@@ -995,11 +1041,17 @@ int main()
     int a,b;
     scanf ("%d%d", &a, &b);
     if(a==b)
+    {
         printf("O JOGO DUROU %d HORA(S)\n",24-a+b);
+    }
     else if(a<=b)
+    {
         printf ("O JOGO DUROU %d HORA(S)\n",b-a);
+    }
     else
+    {
         printf("O JOGO DUROU %d HORA(S)\n",24-a+b);
+    }
     return 0;
 }               // prob bee 1046 game time
 
@@ -1022,7 +1074,10 @@ int main()
     int dif;
     scanf("%d %d %d %d", &a, &c, &b, &d);
     dif = ((b*60)+d) - ((a*60)+c);
-    if(dif<=0) dif += 24*60;
+    if(dif<=0)
+        {
+            dif += 24*60;
+        }
     printf("O JOGO DUROU %d HORA(S) E %d MINUTO(S)\n", dif/60, dif%60);
     return 0;
 }               // prob bee 1047 Game Time with Minutes
@@ -1052,15 +1107,25 @@ int main()
     scanf("%f",&s);
 
     if(s>0 && s<=400.0)
+    {
         printf("Novo salario: %.2f\nReajuste ganho: %.2f\nEm percentual: 15 %%\n",(s+(s*.15)),(s*.15));
+    }
     else if(s<=800.0)
+    {
         printf("Novo salario: %.2f\nReajuste ganho: %.2f\nEm percentual: 12 %%\n",(s+(s*.12)),(s*.12));
+    }
     else if(s<=1200.0)
+    {
         printf("Novo salario: %.2f\nReajuste ganho: %.2f\nEm percentual: 10 %%\n",(s+(s*.10)),(s*.10));
+    }
     else if(s<=2000.0)
+    {
         printf("Novo salario: %.2f\nReajuste ganho: %.2f\nEm percentual: 7 %%\n",(s+(s*.07)),(s*.07));
+    }
     else
+    {
         printf("Novo salario: %.2f\nReajuste ganho: %.2f\nEm percentual: 4 %%\n",(s+(s*.04)),(s*.04));
+    }
     return 0;
 }             // prob bee 1048 Salary increase
 
@@ -1080,7 +1145,6 @@ int main()
 
 
 
-*/
 
 #include <stdio.h>
 
@@ -1093,14 +1157,373 @@ int main()
     scanf("%s", b);
     scanf("%s", c);
 
-    if (a[0] == 'v' && b[0] == 'a' && c[0] == 'c')printf("aguia\n");
-    if (a[0] == 'v' && b[0] == 'a' && c[0] == 'o')printf("pomba\n");
-    if (a[0] == 'v' && b[0] == 'm' && c[0] == 'o')printf("homem\n");
-    if (a[0] == 'v' && b[0] == 'm' && c[0] == 'h')printf("vaca\n");
-    if (a[0] == 'i' && b[0] == 'i' && c[2] == 'm')printf("pulga\n");
-    if (a[0] == 'i' && b[0] == 'i' && c[2] == 'r')printf("lagarta\n");
-    if (a[0] == 'i' && b[0] == 'a' && c[0] == 'h')printf("sanguessuga\n");
-    if (a[0] == 'i' && b[0] == 'a' && c[0] == 'o')printf("minhoca\n");
+    if (a[0] == 'v' && b[0] == 'a' && c[0] == 'c')
+    {
+        printf("aguia\n");
+    }
+    else if (a[0] == 'v' && b[0] == 'a' && c[0] == 'o')
+    {
+        printf("pomba\n");
+    }
+    else if (a[0] == 'v' && b[0] == 'm' && c[0] == 'o')
+    {
+        printf("homem\n");
+    }
+    else if (a[0] == 'v' && b[0] == 'm' && c[0] == 'h')
+    {
+        printf("vaca\n");
+    }
+    else if (a[0] == 'i' && b[0] == 'i' && c[2] == 'm')
+    {
+        printf("pulga\n");
+    }
+    else if (a[0] == 'i' && b[0] == 'i' && c[2] == 'r')
+    {
+        printf("lagarta\n");
+    }
+    else if (a[0] == 'i' && b[0] == 'a' && c[0] == 'h')
+    {
+        printf("sanguessuga\n");
+    }
+    else if (a[0] == 'i' && b[0] == 'a' && c[0] == 'o')
+    {
+        printf("minhoca\n");
+    }
+    return 0;
+}                       // prob bee 1049 Animal
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+int main()
+{
+   int N;
+    scanf("%d",&N);
+
+    if(N==61)
+    {
+        printf("Brasilia\n");
+    }
+    else if(N==71)
+    {
+        printf("Salvador\n");
+    }
+    else if(N==11)
+    {
+        printf("Sao Paulo\n");
+    }
+    else if(N==21)
+    {
+        printf("Rio de Janeiro\n");
+    }
+    else if(N==32)
+    {
+        printf("Juiz de Fora\n");
+    }
+    else if(N==19)
+    {
+        printf("Campinas\n");
+    }
+    else if(N==27)
+    {
+        printf("Vitoria\n");
+    }
+    else if(N==31)
+    {
+        printf("Bela Horizonte\n");
+    }
+    else
+    {
+        printf("DDD nao cadastrado\n");
+    }
+    return 0;
+}               // prob bee 1050 DDD
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    double sal;
+    scanf("%lf", &sal);
+
+    if(sal <= 2000.00)
+    {
+        printf("Isento\n");
+    }
+    else if (sal >= 2000.01 && sal <= 3000.00)
+    {
+         printf("R$ %.2f\n", (sal - 2000.00)*0.08);
+    }
+    else if (sal >= 3000.01 && sal <= 4500.00)
+    {
+        printf("R$ %.2f\n", ((sal - 3000.00)*0.18 + 1000.00*0.08));
+    }
+    else if (sal >= 4500.01)
+    {
+         printf("R$ %.2f\n", ((sal - 4500.00)*0.28 + 1500.00*0.18 + 1000.00*0.08));
+    }
+
+    return 0;
+}                   // prob bee 1051 taxes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int month;
+    scanf("%d", &month);
+
+    switch(month)
+    {
+        case 1:
+            printf("January\n");
+            break;
+
+        case 2:
+            printf("February\n");
+            break;
+
+        case 3:
+            printf("March\n");
+            break;
+
+        case 4:
+            printf("April\n");
+            break;
+
+        case 5:
+            printf("May\n");
+            break;
+
+        case 6:
+            printf("June\n");
+            break;
+
+        case 7:
+            printf("July\n");
+            break;
+
+        case 8:
+            printf("August\n");
+            break;
+
+        case 9:
+            printf("September\n");
+            break;
+
+        case 10:
+            printf("October\n");
+            break;
+
+        case 11:
+            printf("November\n");
+            break;
+
+        case 12:
+            printf("December\n");
+            break;
+        }
+
+    return 0;
+}               // prob bee  1052  month
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int i;
+
+    for(i=1;i<=100;i++)
+    {
+        if(i%2==0)
+        {
+            printf("%d\n", i);
+        }
+    }
+    return 0;
+}                   // prob bee 1059 even numbers
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+
+int main()
+{
+    float x;
+    int i,s=0;
+    for(i=1;i<=6;i++)
+    {
+        scanf("%f",&x);
+
+        if(x>0)
+        {
+            s++;
+        }
+    }
+    printf("%d valores positivos\n",s);
+    return 0;
+}               // prob bee 1060 positive numbers
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+int main()
+{
+    int h, hh, hr,m,mm,d,dm,s,ss;
+
+    scanf("Dia %d",&d);
+    scanf("%d : %d : %d\n",&h,&m,&s);
+    scanf("Dia %d",&dm);
+    scanf("%d : %d : %d",&hh,&mm,&ss);
+
+    s = ss - s;
+    m = mm - m;
+    h = hh - h;
+    d = dm - d;
+
+    if(s<0)
+    {
+        s+=60;
+        m--;
+    }
+
+    if(m<0)
+    {
+        m+=60;
+        h--;
+    }
+
+    if(h<0)
+    {
+        h+=24;
+        d--;
+    }
+
+    printf("%d dia(s)\n", d);
+    printf("%d hora(s)\n", h);
+    printf("%d minuto(s)\n", m);
+    printf("%d segundo(s)\n", s);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
+
+
+#include <stdio.h>
+
+int main()
+{
+    float num,sum=0;
+    int i,count=0;
+    for(i=1;i<=6;i++)
+    {
+        scanf("%f",&num);
+        if(num>0)
+        {
+            sum = sum + num;
+            count++;
+        }
+    }
+    float average = sum/count;
+
+    printf("%d valores positivos\n",count);
+    printf("%.1f\n",average);
 
     return 0;
 }
