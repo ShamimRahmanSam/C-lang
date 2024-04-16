@@ -1486,7 +1486,7 @@ int main()
     printf("%d segundo(s)\n", s);
 
     return 0;
-}
+}                   // prob bee 1061 event time
 
 
 
@@ -1501,8 +1501,6 @@ int main()
 
 
 
-
-*/
 
 
 #include <stdio.h>
@@ -1526,4 +1524,400 @@ int main()
     printf("%.1f\n",average);
 
     return 0;
+}               // prob bee 1064 positives & average
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int n,i,s=0;
+    for(i=1;i<=5;i++)
+    {
+        scanf("%d",&n);
+
+        if(n%2==0)
+        {
+            s++;
+        }
+    }
+    printf("%d valores pares\n",s);
+    return 0;
+}               /prob bee 1065	Even Between five Numbers
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int n,i,even=0,odd=0,pos=0,neg=0;
+
+    for(i=1; i<=5; i++)
+    {
+        scanf("%d", &n);
+
+        if(n%2==0)
+        {
+            even++;
+        }
+
+        if(n%2!=0)
+        {
+            odd++;
+        }
+
+        if(n>0)
+        {
+            pos++;
+        }
+
+        if(n<0)
+        {
+            neg++;
+        }
+    }
+
+    printf("%d valor(es) par(es)\n",even);
+    printf("%d valor(es) impar(es)\n",odd);
+    printf("%d valor(es) positivo(s)\n",pos);
+    printf("%d valor(es) negativo(s)\n",neg);
+
+    return 0;
+}               // prob bee   1066    Even, Odd, Positive and Negative
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int x,i;
+    scanf("%d",&x);
+
+    for(i=1;i<=x;i++)
+    {
+        if(i%2!=0)
+        {
+            printf("%d\n", i);
+        }
+    }
+    return 0;
+}                   // prob bee  1067  Odd Numbers
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    int n, i=0;
+    scanf("%d", &n);
+
+    while(i < 6){
+        if(n%2!=0){
+            printf("%d\n", n);
+            i++;
+        }
+        n++;
+     }
+    return 0;
+}                   // prob bee 1070  six odd numbers
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    int x, y, i, min, max, sum=0;
+
+    scanf("%d %d", &x, &y);
+
+    if(x < y)
+    {
+        min = x;
+        max = y;
+    }
+    else
+    {
+        max = x;
+        min = y;
+    }
+
+    for(i = (min + 1); i < max; ++i)
+    {
+        if(i % 2 != 0)
+        {
+            sum += i;
+        }
+    }
+
+    printf("%d\n", sum);
+
+    return 0;
+}               // prob  bee  1071    Sum of Consecutive Odd Numbers
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int x,n,i,in=0,out=0;
+
+    scanf("%d",&x);
+
+    for(i=0;i<x;i++)
+    {
+        scanf("%d", &n);
+
+        if(n>=10 && n<=20)
+        {
+            in++;
+        }
+        else
+        {
+            out++;
+        }
+    }
+    printf("%d in\n%d out\n",in,out);
+    return 0;
+}                     // prob bee 1072  interval 2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+	int n,i;
+	scanf("%d",&n);
+	for(i=2;i<=n;i+=2)
+	{
+	    printf("%d^2 = %d\n",i,i*i);
+	}
+	return 0;
+}               // prob bee 1073  Even Square
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+int main()
+{
+    int N,X,i;
+    scanf ("%d", &N);
+    for(i=1;i<=N;i++)
+    {
+        scanf ("%d",&X);
+        if(X==0)
+        {
+            printf("NULL\n");
+        }
+        else if(X<0 && X%2==0)
+        {
+            printf ("EVEN NEGATIVE\n");
+        }
+        else if(X<0 && X%2!=0)
+        {
+            printf ("ODD NEGATIVE\n");
+        }
+        else if(X>0 && X%2==0)
+        {
+            printf ("EVEN POSITIVE\n");
+        }
+        else if(X>0 && X%2!=0)
+        {
+            printf ("ODD POSITIVE\n");
+        }
+    }
+    return 0;
+}                   // prob bee 1074 Even or odd
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int n,i;
+    scanf("%d", &n);
+
+    for(i=1; i<=10000; i++)
+    {
+        if(i%n==2)
+        {
+            printf("%d\n", i);
+        }
+    }
+    return 0;
+}               // prob bee 1075   Remaining 2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int n,i;
+    scanf("%d",&n);
+
+    for(i=1;i<=10;i++)
+    {
+        printf("%d x %d = %d\n",i,n,i*n);
+    }
+    return 0;
+}       // prob bee 1078 multiplication table
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
+
+#include<stdio.h>
+int main()
+{
+
 }
+
+

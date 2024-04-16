@@ -1,9 +1,16 @@
 /*
 
-Date : 22/03/24
+Date : 22/03/2024
 Question/Tasks : 1. How To find Array's Last integer number?
                  2. How to find Max integer Number of an array where we have 10 integer numbers in that array?
-                 3. Find out the second largest element of an array.
+
+
+Date :; 16/04/2024
+                 3. Give some array element as input and find out the second largest element of that array.
+
+
+
+
 
 
 
@@ -71,35 +78,67 @@ int main() {
 
 
 
+
+
 */
 
 
+
 //Task 3 : Find out 2nd largest element of an array
-
 #include <stdio.h>
+int main ()
+{
+    int i, n=0, largest1=0, largest2=0, temp=0;
 
-int main() {
-   int array[10] = {101, 11, 3, 4, 70, 69, 7, 8, 9, 0};
-   int i, max, second;
+    printf("Enter the size of the Array\n");
 
-   if(array[0] > array[1]) {
-      max = array[0];
-      second  = array[1];
-   } else {
-      max = array[1];
-      second  = array[0];
-   }
+    scanf("%d", &n);
 
-   for(i = 1; i < 10; i++) {
-      if( max < array[i] ) {
-         second = max;
-         max = array[i];
-      } else if( second < array[i] ) {
-         second =  array[i];
-      }
-   }
+    int array[n];
 
-   printf("Maximum Number : %d \nSecond Maximum Number : %d \n", max, second);
+    printf ("Enter the Elements\n");
 
-   return 0;
+    for (i=0; i<n; i++)
+    {
+        scanf ("%d", &array[i]);
+    }
+
+    printf ("\n\n");
+
+    printf ("The array elements are : \n");
+
+    for (i=0; i<n; i++)
+    {
+        printf ("%d\t", array[i]);
+    }
+
+    printf ("\n\n");
+
+    largest1 = array[0];
+    largest2 = array[1];
+
+    if (largest1 < largest2)
+    {
+        temp = largest1;
+        largest1 = largest2;
+        largest2 = temp;
+    }
+
+    for (int i=2; i<n; i++)
+    {
+        if (array[i] > largest1)
+        {
+            largest2 = largest1;
+            largest1 = array[i];
+        }
+        else if (array[i] > largest2 && array[i] != largest1)
+        {
+            largest2 = array[i];
+        }
+    }
+
+    printf ("LARGEST ElEMENT = %d\n", largest1);
+    printf ("SECOND LARGEST ELEMENT = %d\n", largest2);
+
+    return 0;
 }

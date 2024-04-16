@@ -272,8 +272,7 @@ int main()
 	}
 
 	// copying array 2 elements into an array
-	for (i = 0, j = arr1;
-		j < arr_r && i < arr2; i++, j++) {
+	for (i = 0, j = arr1; j < arr_r && i < arr2; i++, j++) {
 		c[j] = b[i];
 	}
 
