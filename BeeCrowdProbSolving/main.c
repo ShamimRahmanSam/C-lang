@@ -1912,12 +1912,62 @@ int main()
 
 
 
-*/
-
 #include<stdio.h>
+
 int main()
 {
+    int n,i;
+    float a,b,c,av;
 
-}
+    scanf("%d",&n);
+
+    for(i=1;i<=n;i++)
+    {
+        scanf("%f %f %f",&a,&b,&c);
+        av = (a*2+b*3+c*5)/(2+3+5);
+        printf("%.1f\n",av);
+    }
+
+    return 0;
+}               // prob bee 1079 weighted averages
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
+
+
+#include<stdio.h>
+
+int main()
+{
+    int i,j=0, p, arr[100];
+    for (i=0;i<100;i++){
+        scanf("%d", &arr[i]);
+    }
+    for(i=0;i<100;i++)
+    {
+        if(arr[i] > j)
+        {
+            j = arr[i];
+            p = i+1;
+        }
+    }
+
+    printf("%d\n", j);
+    printf("%d\n", p);
+
+    return 0;
+}               // prob bee 1080  Highest and Position

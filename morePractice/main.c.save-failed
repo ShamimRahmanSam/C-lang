@@ -1,0 +1,1652 @@
+/*
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    printf("Hello world!\n");
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+//interview ques by Shakib bhai
+
+#include<stdio.h>
+int main()
+{
+    int i;
+    for(i=0;i<10;i++){
+    printf("%d\n",i);
+    //return 0;  // if we don't use this return 0 here then the output will be 0-9 ...
+    }
+    printf("%d\n",i);    // if we use this printf here then it will give us output 10 ... and then the total output will be 0-10 with the last output 0-9 ...
+    return 0;   // if we use the return 0 in for loop and then use return 0 here or not.. then the output will be 0
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//from subeen's book.. problem solving 4...... done by me.
+
+#include<stdio.h>
+
+int main()
+{
+    double u, a , v, t, ans;
+
+    printf("u = ");
+    scanf("%lf", &u);
+
+    printf("a = ");
+    scanf("%lf", &a);
+
+    printf("t = ");
+    scanf("%lf", &t);
+
+    v = u + a * t;
+    ans = 2 * t * v;
+
+    printf("2t = %.2lf\n", ans);
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+// from subeen's book .. problem solve 5 in a loop way.  code 5.6
+
+#include <stdio.h>
+int main()
+{
+ int i, n, sum;
+ scanf("%d", &n);
+ for(i = 1, sum = 0; i <= n; i++)
+    {
+    sum = sum + i;
+    }
+ printf("Summation is %d\n", sum);
+ return 0;
+}
+
+
+
+
+
+
+
+
+
+// from subeen's book problem solving 6.... code 5.7 (celsius to farenheit)
+
+#include<stdio.h>
+int main()
+{
+    double C,F;
+
+    printf("Celsius : ");
+    scanf("%lf", &C);
+
+    F = (C * 1.8) + 32;
+
+    printf("Farenheit : %.2lf\n", F);
+    return 0;
+}
+
+
+
+
+
+
+
+
+// prob solve: (Farenheit to celsius by ownself )
+
+#include<stdio.h>
+int main()
+{
+    double C,F;
+
+    printf("Farenheit : ");
+    scanf("%lf", &F);
+
+    C = (F - 32) * 5 / 9;
+
+    printf("Celsius : %.2lf\n", C);
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//code 6.4 from subeen's book.. did the opposite version of this one after this code..
+
+#include<stdio.h>
+int main()
+{
+    int array[10] = {10, 20, 30, 40, 50, 60, 70, 80, 90, 100};
+    int i;
+
+    for(i=0;i<10;i++)
+    {
+        printf("%dth element : %d\n", i+1, array[i]);
+    }
+    return 0;
+}                       // code 6.4
+
+
+
+
+
+
+
+
+
+// opposite version of code 6.4
+#include <stdio.h>
+int main()
+{
+    int ara[10] = {10, 20, 30, 40, 50, 60, 70, 80, 90, 100};
+    int i;
+    for(i = 9; i >= 0; i--)
+        {
+        printf("%d th element is: %d\n", i, ara[i]);
+        }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// code 7.9 from subeen's book problem solving by ownself ... circle's area prcaticed this code by using function
+
+#include<stdio.h>
+
+double area(double n1, double n2)
+{
+    double a = n1*n2;
+    return a;
+}
+
+int main()
+{
+    double r,a;
+    double pi = 3.14;
+
+    printf("Pi = %.2lf\n", pi);
+
+    printf("r = ");
+    scanf("%lf", &r);
+
+    a = area(pi,r);
+
+    printf("circle's area : %.2lf\n", a);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//array merging or Concatenation of integers
+
+#include <stdio.h>
+int main()
+{
+	int arr1 = 5, arr2 = 5, arr_r, i, j;
+
+	int a[5] = { 1, 2, 3, 4, 5 };
+
+	int b[5] = { 6, 7, 8, 9, 10 };
+
+	arr_r = arr1+ arr2;
+	int c[arr_r];
+
+	// copying array 1 elements into an array
+	for (i = 0; i < arr1; i++) {
+		c[i] = a[i];
+	}
+
+	// copying array 2 elements into an array
+	for (i = 0, j = arr1; j < arr_r && i < arr2; i++, j++) {
+		c[j] = b[i];
+	}
+
+	// Array Elements After Merging
+	for (i = 0; i < arr_r; i++) {
+		printf("%d ", c[i]);
+	}
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// concatenation of string
+
+#include <stdio.h>
+//#include <string.h>
+
+int main() {
+    char str1[] = "Welcome To";
+    char str2[] = " DocTime";
+
+    // Concatenate str2 to str1
+    strcat(str1, str2);
+
+    // Print the result
+    printf("Concatenated String: %s\n", str1);
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// creating a program to get 1-10 Namta
+
+#include<stdio.h>
+int main()
+{
+    // by using 2D array
+    int namta[10][10];
+    int row,col;
+
+    for(row=0;row<10;row++)
+    {
+        for(col=0;col<10;col++)
+        {
+            namta[row][col] = (row+1)*(col+1);
+            printf("%d x %d = %d\n", (row + 1), (col + 1), namta[row][col]);
+
+        }
+        printf("\n\n");
+    }                       // code 11.2 but in own way .. without using same for loop for 2 times. check the code from the book to see changes
+    // return 0;        // this code end here if we just want the output by using 2D array
+
+
+
+    printf("\n\n\n\n\n\n\n");
+
+
+
+    //getting the same namta output by using for loop only..did it by ownself. without using array system.
+    int i,j,n;
+    for(i = 1; i <= 10; i++)                // instead of i++ , we can use i=i+1 in this code to get the same the output... need to apply same in j++ if we change i++ to i=i+1
+        {
+            for(j = 1; j <= 10; j++)
+            {
+                n = i*j;
+                printf("%d X %d = %d\n", i, j, n);
+            }
+            printf("\n\n");     //NAMTA CREATION SYSTEM CAN BE POSSIBLE BY USING ONLY "FOR LOOP" LIKE THIS WAY WITHOUT ARRAY SYSTEM.
+
+        }
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Array facts practice
+
+#include <stdio.h>
+
+int main()
+{
+ 	int myNumbers[] = {7, 100, 23, 50, 6, 21, 100, 3, 50, 1000};
+
+	int length, firstElement, sixthElement, lastElement;
+
+    int maxNumber, minNumber = myNumbers[0];
+
+
+	length = sizeof(myNumbers)/sizeof(myNumbers[0]);
+
+    firstElement = myNumbers[0];
+    sixthElement = myNumbers[5];
+
+    lastElement = myNumbers[length - 1];
+
+
+    for (int i = 0; i < length; i++)
+        {
+            if (myNumbers[i] > maxNumber)
+                {
+                    maxNumber = myNumbers[i];
+                }
+                else if (myNumbers[i] < minNumber)
+                    {
+                        minNumber = myNumbers[i];
+                    }
+                    else
+                        {
+                            continue;
+                        }
+        }
+
+
+    printf("Array Length : %d\n\n", length);
+
+    printf("First Element is : %d\n", firstElement);
+    printf("Sixth Element is : %d\n", sixthElement);
+    printf("Last Element is : %d\n\n\n", lastElement);
+
+    printf("The maximum integer number in the array is: %d\n", maxNumber);
+    printf("The minimum integer number in the array is: %d\n\n", minNumber);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int n=14;
+    if(n%2==0)
+    {
+        printf("even\n");
+    }
+    else
+    {
+        printf("odd\n");
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+int main()
+{
+    int n = 0;
+    while (n < 10)
+        {
+            n++;
+            if (n % 2 == 0)
+            {
+                continue;
+            }
+    printf("%d\n", n);
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int a,b,c;
+    for(a=1;a<=3;a++)
+    {
+        for(b=1;b<=3;b++)
+        {
+            if(b!=a)
+            {
+                for(c=1;c<=3;c++)
+                {
+                    if(c!=b && c!=a)
+                        {
+                            printf("%d, %d, %d\n",a,b,c);
+                        }
+                }
+            }
+        }
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int a,b,c;
+    for(a=1;a<=3;a++)
+    {
+        for(b=1;b<=3;b++)
+        {
+            for(c=1;c<=3;c++)
+            {
+                if(b!=a && c!=b && c!=a)
+                {
+                    printf("%d, %d, %d\n", a, b, c);
+                }
+            }
+        }
+    }
+    return 0;
+}
+//less run time
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int n=1;
+    while(n<=100)
+    {
+        printf("%d\n", n);
+        n++;
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int x=1;
+    while(x<=100)
+    {
+        printf("%d\n", x);
+        x++;
+        if(x>10)
+        {
+            break;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int x;
+    for(x=1;x<=100;x++)
+    {
+
+        if(x%2==0)
+        {
+            continue;
+        }
+        printf("%d\n", x);
+
+    }
+    return 0;  //output will be 1-100 (odd numbers)
+}
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int n=5,i,c;
+    for(i=1;i<=10;i++)
+    {
+        c =n*i;
+        printf("%d x %d = %d\n", n,i,c);
+    }
+    return 0;
+}
+// 5's namta
+
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int i,j,k;
+    for(i=1;i<=20;i++)
+    {
+        for(j=1;j<=10;j++)
+        {
+            k = i*j;
+            printf("%d x %d = %d\n", i, j, k);
+        }
+    }
+    return 0;
+} // namta 1-20
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// finding first and last digit number .. own task practice..
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int n, firstDigit, lastDigit, digits;
+
+    printf("Enter any number: ");
+    scanf("%d", &n);
+
+    lastDigit = n % 10;
+
+    digits = (int)log10(n);
+
+    firstDigit = (int)(n / pow(10, digits));
+
+    printf("First digit = %d\n", firstDigit);
+    printf("Last digit = %d\n", lastDigit);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <math.h>
+#include <stdio.h>
+
+int main() {
+    double base, exp, result;
+    printf("Enter a base number: ");
+    scanf("%lf", &base);
+    printf("Enter an exponent: ");
+    scanf("%lf", &exp);
+
+    // calculates the power
+    result = pow(base, exp);
+
+    printf("%.1lf^%.1lf = %.2lf", base, exp, result);
+    return 0;
+}                   // USING POW FROM MATH.H TO GET THE EXPONENT OF A NUMBER . LIKE 3TO THE POWER 4 = 81
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int x,y,p,m;
+    p=15, m=5;
+    x=(p+m)/2;
+    y=(p-m)/2;
+    printf("x=%d, y=%d",x,y);
+    return 0;
+}                  //prob solve 5.1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+int main() {
+    int x = 5;
+    printf("%d %d %d", x, x++, ++x);
+    return 0;
+}
+
+
+
+
+
+
+
+
+#include <stdio.h>
+int main() {
+    int i = 0;
+    while (i < 5) {
+        printf("%d ", i);
+        i++;
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+int main() {
+    char str[] = "Hello, World!";
+    printf("%s", str);
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+int main() {
+    int x = 10;
+    printf("The value of x is: %d", x);
+}
+
+
+
+
+
+
+
+
+#include <stdio.h>
+int main() {
+    int arr[5];
+    for (int i = 0; i <= 5; i++) {
+        arr[i] = i;
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int a,b,sum;
+    scanf("%d %d",&a,&b);
+    sum = a+b;
+    printf("%d", sum);
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int a,b,i,sum=0;
+    scanf("%d %d",&a,&b);
+
+    for(i=a;i<=b;i++)
+    {
+        sum+=i;
+    }
+    printf("%d", sum);
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int a;
+    scanf("%d",&a);
+    if(a%2==0)
+    {
+        printf("even\n");
+    }
+    else
+    {
+        printf("odd\n");
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int x=100;
+    printf("The address of x is %p", &x);  // The %p format specifier to print the address in hexadecimal form.
+    return 0;
+}     //  A variable x was defined and initialized with the value 100 in the program above.
+        // We retrieved the address of this variable x by using the address operator (&) as the prefix and printed it using printf() function
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int x=1;
+    int* ptr;   // integer pointer
+    ptr = &x;   // pointer initialization with the address of x
+    printf("Value of x is %d\n", *ptr);   // accessing value of x usin pointer
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int s=7;
+    int *m = &s;
+    printf("%u\t %d\t %p\n", m, *m, &s);   //  m is  the address value and *m is reference value of s and &s is the address
+    m++;
+    printf("m++ is %u", m); //increment of pointer
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+// pointer increment and decrement
+//pointers are incremented and decremented by the size of the data type they point to
+
+#include <stdio.h>
+int main()
+{
+    int a = 22;
+    int *p = &a;
+
+    printf("p = %u\n", p); // p = 6422288
+
+    p++;
+    printf("p++ = %u\n", p); //p++ = 6422292    +4   // 4 bytes
+
+    p--;
+    printf("p-- = %u\n", p); //p-- = 6422288     -4   // restored to original value
+
+
+    float b = 22.22;
+    float *q = &b;
+
+    printf("q = %u\n", q);  //q = 6422284
+
+    q++;
+    printf("q++ = %u\n", q); //q++ = 6422288      +4   // 4 bytes
+
+    q--;
+    printf("q-- = %u\n", q); //q-- = 6422284       -4  // restored to original value
+
+
+    char c = 'a';
+    char *r = &c;
+
+    printf("r = %u\n", r);   //r = 6422283
+
+    r++;
+    printf("r++ = %u\n", r);   //r++ = 6422284     +1   // 1 byte
+
+    r--;
+    printf("r-- = %u\n", r);   //r-- = 6422283     -1  // restored to original value
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// C program to illustrate pointer Addition
+#include <stdio.h>
+
+// Driver Code
+int main()
+{
+    // Integer variable
+    int N = 4;
+
+    // Pointer to an integer
+    int *ptr1, *ptr2;
+
+    // Pointer stores the address of N
+    ptr1 = &N;
+    ptr2 = &N;
+
+    printf("Pointer ptr2 before Addition: ");
+    printf("%p \n", ptr2);
+
+    // Addition of 3 to ptr2
+    ptr2 = ptr2 + 3;
+    printf("Pointer ptr2 after Addition: ");
+    printf("%p \n", ptr2);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// C program to illustrate Subtraction
+// of two pointers
+#include <stdio.h>
+
+// Driver Code
+int main()
+{
+    int x = 6; // Integer variable declaration
+    int N = 4;
+
+    // Pointer declaration
+    int *ptr1, *ptr2;
+
+    ptr1 = &N; // stores address of N
+    ptr2 = &x; // stores address of x
+
+    printf(" ptr1 = %u, ptr2 = %u\n", ptr1, ptr2);
+    // %p gives an hexa-decimal value,
+    // We convert it into an unsigned int value by using %u
+
+    // Subtraction of ptr2 and ptr1
+    x = ptr1 - ptr2;
+
+    // Print x to get the Increment
+    // between ptr1 and ptr2
+    printf("Subtraction of ptr1 "
+           "& ptr2 is %d\n",
+           x);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// C Program to illustrare pointer comparision
+#include <stdio.h>
+
+int main()
+{
+    // declaring array
+    int arr[5];
+
+    // declaring pointer to array name
+    int* ptr1 = &arr;
+    // declaring pointer to first element
+    int* ptr2 = &arr[0];
+
+    if (ptr1 == ptr2) {
+        printf("Pointer to Array Name and First Element "
+               "are Equal.");
+    }
+    else {
+        printf("Pointer to Array Name and First Element "
+               "are not Equal.");
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// C Program to demonstrate the pointer comparison with NULL
+// value
+#include <stdio.h>
+
+int main()
+{
+
+    int* ptr = NULL;
+
+    if (ptr == NULL) {
+        printf("The pointer is NULL");
+    }
+    else {
+        printf("The pointer is not NULL");
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int n=1;
+    while(n<=100)
+    {
+        printf("%d\n", n);
+        n++;      // we can also use n= n+1 here
+
+        if(n>=22)           // if we use n>22 then the output will be 1-22 but if we use n>=22 then the output will be 1-21.
+        {
+            break;     // we use break to break the loop after getting what we need..
+        }
+
+        //return 0;     // if we use return 0 here then the output will be 1. then break won't work also like n++... but if we use this return 0; after the while loop and in int main function then we will get the actual output;
+    }
+    return 0; //output will be 1-21
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int n=7, i=1, ans=n*i;
+    while(i<=10)
+    {
+        printf("%d X %d = %d\n", n, i, ans); //n*i);    // without n*i the output will be 0 for everyone and we can use ans=n*i in the integer and then we can use just ans variable here to get the output. and that's how e don't need to write code like this n*i here
+        i++;            // we can use i=i+1 here instead of i++
+        // return 0;       // if we use return 0 here then the output will be 7x1=7 cause i++ will not be used in the loop if we use return 0 here so it should be after whie oop and in main() loop
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+int main()
+{
+    int m, n = 5;
+    int i;
+    m = 0;
+    for(i = 1; i <= 10; i = i + 1)
+    {
+         m = m + n;    // it's better to addition than multiply in coding cause addition take less time than multiplication...
+         printf("%d X %d = %d\n", n, i, m);
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    double a1,a2,b1,b2,c1,c2,d,x,y;
+
+    printf("a1 = ");
+    scanf("%lf", &a1);
+
+    printf("a2 = ");
+    scanf("%lf", &a2);
+
+    printf("b1 = ");
+    scanf("%lf", &b1);
+
+    printf("b2 = ");
+    scanf("%lf", &b2);
+
+    printf("c1 = ");
+    scanf("%lf", &c1);
+
+    printf("c2 = ");
+    scanf("%lf", &c2);
+
+    d = a1*b2-a2*b1;
+
+    if((int)d==0)
+    {
+        printf("x & y can not be determined.\n");
+    }
+    else
+    {
+        x = (b2*c1-b1*c2)/d;
+        y = (a1*c2-a2*c1)/d;
+
+        printf("x = %.2lf, y = %.2lf", x, y);
+    }
+    return 0;
+
+}                       // problem solving 2..  code 5.3
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+int main()
+{
+ int i, n, sum=0;
+ scanf("%d", &n);
+ for(i = 1; i <= n; i++)
+    {
+    sum = sum + i;
+    }
+ printf("Summation is %d\n", sum);
+ return 0;
+}                   // problem solve 5 in a loop way.  code 5.6
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int a,b,x,gcd;
+    scanf("%d %d",&a,&b);
+    printf("%d %d\t %p %p\n", a,b,&a,&b);    // input and memory address practice
+
+    x = (a < b) ? a : b;            // ternary operator used instead of if else cause here is one condition only.
+
+    for( ; x>=1; x--)
+    {
+        if(a%x==0 && b%x==0)
+        {
+            gcd = x;
+            break;
+        }
+    }
+    printf(" GCD is %d\n", gcd);
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int a,b,t,gcd;
+
+    scanf("%d\n%d",&a,&b);
+
+    if(a==0)
+    {
+        gcd=a;
+    }
+    else if(b==0)
+    {
+        gcd=b;
+    }
+    else
+    {
+        while(b!=0)
+        {
+            t=b;        // t=temp
+            b=a%b;
+            a=t;
+        }
+        gcd=a;
+    }
+    printf("gcd : %d\n", gcd);
+    return 0;
+}                   //prob solve 7..... code 5.9 (more efficient)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+
+int main() {
+    int a, b, gcd, temp;
+
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+
+    while (b != 0)
+    {
+        temp = b;
+        b = a % b;
+        a = temp;
+    }
+    gcd = a;
+
+    printf("GCD: %d\n", gcd);
+    return 0;
+}                   // efficient format for gcd by euclidean algorithm
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int a,b,temp,gcd;
+    scanf("%d %d",&a,&b);
+
+    if(a==0 || b==0 )
+    {
+        gcd=0;
+    }
+    else if(a==1 || b==1)
+    {
+        gcd=1;
+    }
+    else
+    {
+        while(b!=0)
+        {
+            temp=b;
+            b=a%b;
+            a=temp;
+        }
+        gcd=a;
+    }
+    printf("GCD is %d\n", gcd);
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int gcd(int a, int b)
+{
+    if (b == 0)
+    {
+        return a;
+    }
+    return gcd(b, a%b);     //recursive call.. recursion example and an easy way to get gcd by creating function and with euclidean algorithm
+}
+
+int main() {
+    int num1, num2;
+
+    printf("Enter two numbers: ");
+    scanf("%d %d", &num1, &num2);
+
+    printf("GCD of %d and %d is %d\n", num1, num2, gcd(num1, num2));
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int gcd(int a, int b)
+{
+    if (b == 0)
+    {
+        return a;
+    }
+    return gcd(b, a%b);
+}
+
+int lcm(int a, int b)
+{
+    return (a * b) / gcd(a, b);
+}
+
+int main()
+{
+    int num1, num2;
+
+    printf("Enter two numbers: ");
+    scanf("%d %d", &num1, &num2);
+
+    printf("LCM of %d and %d is %d\n", num1, num2, lcm(num1, num2));
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
+
+
+
+#include<stdio.h>
+int main()
+{
+    int array[10] = {10, 20, 30, 40, 50, 60, 70, 80, 90, 100};
+    int i;
+
+    for(i=0;i<10;i++)
+    {
+        printf("%dth element : %d\n", i+1, array[i]);
+    }
+    return 0;
+}                       // code 6.4
+
+
+
+

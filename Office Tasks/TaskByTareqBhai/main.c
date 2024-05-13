@@ -80,7 +80,6 @@ int main() {
 
 
 
-*/
 
 
 
@@ -103,7 +102,7 @@ int main ()
         scanf ("%d", &array[i]);
     }
 
-    printf ("\n\n");
+    printf ("\n");
 
     printf ("The array elements are : \n");
 
@@ -142,3 +141,114 @@ int main ()
 
     return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Date 18/04/2024
+// task 4 : infinity for loop. range 0-100 ... click + to increment and - to decrement and count how many + or - clicked.
+// need to this later!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// date : 25-4-2024
+// task 5 :  Find out every alphabet's count in an array string
+
+
+
+
+#include <stdio.h>
+
+int main() {
+    char input[100];
+    int counts[26] = {0};
+
+    printf("Enter a string: ");
+
+    fgets(input, sizeof(input), stdin);
+
+    for(int i = 0; input[i] != '\0'; i++)
+    {
+        if(input[i] == '\n')
+        {
+            input[i] = '\0';
+            break;
+        }
+    }
+
+    for(int i = 0; input[i] != '\0'; i++)
+    {
+        char c = input[i];
+        if(c >= 'a' && c <= 'z')
+        {
+            counts[c - 'a']++;
+        }
+    }
+
+    printf("Occurrences of each alphabet:\n");
+
+    for(int i = 0; i < 26; i++)
+    {
+        printf("%c: %d\n", 'a' + i, counts[i]);
+    }
+
+    return 0;
+}
+

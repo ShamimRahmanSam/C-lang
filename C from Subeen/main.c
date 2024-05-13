@@ -1,29 +1,6 @@
 /*
 
 
-
-#include <stdio.h>
-#include <stdlib.h>
-
-int main()
-{
-    printf("Hello world!\n");
-    return 0;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #include <stdio.h>
 int main()
 {
@@ -93,9 +70,9 @@ int main()
     printf("Value of a is %d\n", a);
     a = -10000000;
     printf("Value of a is %d\n", a);
-    a = 100020004000503;
+    a = 100020004000503;    // output will not be proper cause of int number range
     printf("Value of a is %d\n", a);
-    a = -4325987632;
+    a = -4325987632;            //  output will not be proper cause of int number range
     printf("Value of a is %d\n", a);
     return 0;
 }
@@ -235,13 +212,15 @@ int main()
 {
     int n;
     n = 10;
-    if(n >= 0) {
+    if(n >= 0)
+    {
         printf("The number is positive\n");
- }
-    else {
+    }
+    else
+    {
         printf("The number is negative\n");
- }
- return 0;
+    }
+    return 0;
 }
 
 
@@ -259,16 +238,19 @@ int main()
 int main()
 {
     int n = 10;
-    if(n < 0) {
+    if(n < 0)
+    {
         printf("The number is negative\n");
- }
-    else if (n > 0) {
+    }
+    else if (n > 0)
+    {
         printf("The number is positive\n");
- }
-    else {
+    }
+    else
+    {
         printf("The number is zero!\n");
- }
- return 0;
+    }
+    return 0;
 }
 
 
@@ -288,12 +270,14 @@ int main()
     int number, remainder;
     number = 5;
     remainder = number % 2;
-    if(remainder == 0) {
+    if(remainder == 0)
+    {
         printf("The number is even\n");
- }
-    else {
+    }
+    else
+    {
         printf("The number is odd\n");
- }
+    }
     return 0;
 }
 
@@ -338,10 +322,12 @@ int main()
 int main()
 {
     char ch = 'W';
-    if(ch >= 'a' && ch <= 'z') {
+    if(ch >= 'a' && ch <= 'z')
+    {
         printf("%c is lower case\n", ch);
-}
-    else if(ch >= 'A' && ch <= 'Z') {
+    }
+    else if(ch >= 'A' && ch <= 'Z')
+    {
         printf("%c is upper case\n", ch);
     }
     return 0;
@@ -361,7 +347,8 @@ int main()
 int main()
 {
     int n=1;
-    while(n<=50){
+    while(n<=50)
+    {
         printf("%d\n", n);
         n++;   // the output will be 1 to 50
     }
@@ -424,13 +411,13 @@ int main()
         n++;      // we can also use n= n+1 here
 
         if(n>=22)           // if we use n>22 then the output will be 1-22 but if we use n>=22 then the output will be 1-21.
-            {
+        {
             break;     // we use break to break the loop after getting what we need..
-            }
+        }
 
-        //return 0;     // if we use return 0 here then the output will be 1. een break won't work also like n++... but if we use this return 0; after the while loop and in int main function then we will get the actual output;
+        //return 0;     // if we use return 0 here then the output will be 1. then break won't work also like n++... but if we use this return 0; after the while loop and in int main function then we will get the actual output;
     }
-    return 0;
+    return 0; //output will be 1-21
 }
 
 
@@ -452,9 +439,9 @@ int main()
     while (n < 10)
         {
         n = n + 1;          // we can't use n++ here cause of the n%2==0 condition
-        if (n % 2 == 0)    // % means modulus and this condition means if any number devided by 2 will be 0 then this program won't give that output on the main output. so the output will be 1 3 5 7 9
+        if (n % 2 == 0)    // % means modulus and this condition means if any number divided by 2 will be 0 then this program won't give that output on the main output. so the output will be 1 3 5 7 9
         {
-        continue;
+            continue;
         }
         printf("%d\n", n);
     }
@@ -511,7 +498,7 @@ int main()
 
 #include <stdio.h>
 int main()
-    {
+{
     int m, n = 5;
     int i;
     m = 0;
@@ -551,18 +538,28 @@ int main()
 
 
 
+
+
+
+
+
+
+
 #include <stdio.h>
 int main()
 {
     int a, b, c;
-    for (a = 1; a <= 3; a++) {
-        for (b = 1; b <= 3; b++) {
-            for (c = 1; c <= 3; c++) {
+    for (a = 1; a <= 3; a++)
+    {
+        for (b = 1; b <= 3; b++)
+        {
+            for (c = 1; c <= 3; c++)
+            {
                 printf ("%d, %d, %d\n", a, b, c);
             }
         }
     }
- return 0;
+    return 0;
 }    // 4.11 from subeen's book
 
 
@@ -573,18 +570,25 @@ int main()
 
 
 
+
+
+
+
 #include <stdio.h>
 int main()
 {
     int a, b, c;
-    for (a = 1; a <= 3; a++) {
-        for (b = 1; b <= 3 && b != a; b++) {
-            for (c = 1; c <= 3 && c != a && c != b; c++) {
+    for (a = 1; a <= 3; a++)
+    {
+        for (b = 1; b <= 3 && b != a; b++)
+        {
+            for (c = 1; c <= 3 && c != a && c != b; c++)
+            {
                 printf ("%d, %d, %d\n", a, b, c);
             }
         }
     }
- return 0;
+    return 0;
 }               // 4.12 code from subeen's book.
 
 
@@ -603,16 +607,21 @@ int main()
 int main()
 {
     int a,b,c;
-    for (a=1;a<=3;a++){
-        for (b=1;b<=3;b++){
-            if(b!=a){
-                for(c=1;c<=3;c++){
-                    if(c!=b && c!=a){
+    for (a=1;a<=3;a++)
+    {
+        for (b=1;b<=3;b++)
+        {
+            if(b!=a)
+            {
+                for(c=1;c<=3;c++)
+                {
+                    if(c!=b && c!=a)
+                    {
                         printf("%d, %d, %d\n",a,b,c);
                     }
                 }
-            } // return 0;   // if we use return here or uppper then we won't get any output
-        }   //return 0;   // if we use return here then we won't get the actual output. this will give us 1, 2, 31,    3, 2
+            } // return 0;   // if we use return here or upper then we won't get any output
+        }   //return 0;   // if we use return here then we won't get the actual output. this will give us 1, 2, 3, 1, 3, 2
     }
     return 0;                   // got the actual output of permutation which we wanted as output
 }               // 4.13 code from subeen's book
@@ -631,14 +640,17 @@ int main()
 int main()
 {
     int a,b,c;
-    for(a=1;a<=3;a++){
-        for(b=1;b<=3;b++){
-            for(c=1;c<=3;c++){
+    for(a=1;a<=3;a++)
+    {
+        for(b=1;b<=3;b++)
+        {
+            for(c=1;c<=3;c++)
+            {
                 if(b!=a && c!=a && c!=b)   // better condition than 4.13 code (upper one)  ... but the problem is this code will get more runtime than the upper one... but it's an easy way to get the actual output
-                    {
+                {
                     printf("%d, %d, %d\n", a, b, c);
-                    }
                 }
+            }
         }
     }
     return 0;           // better solution of 4.13 code from subeen's book. same permutation output in a better conditional way.. btw this 4.14 code from subeen's book
@@ -737,14 +749,14 @@ int main()
         printf("x & y is not determined\n");
     }
     else
-        {
-            x = (b2*c1 - b1*c2)/d;
-            y = (a1*c2 - a2*c1)/d;
+    {
+        x = (b2*c1 - b1*c2)/d;
+        y = (a1*c2 - a2*c1)/d;
 
-            printf("x = %.2lf, y = %.2lf", x, y);
-            //return 0;  // in this code if we use return here instead of lower line , still we could get the proper result cause of the conditional loop process
-        }
-        return 0;
+        printf("x = %.2lf, y = %.2lf", x, y);
+        //return 0;  // in this code if we use return here instead of lower line , still we could get the proper result cause of the conditional loop process
+    }
+    return 0;
 }
 
 
@@ -979,14 +991,14 @@ int main()
 
 int main()
 {
-    double num, sum;
+    int num, sum;
 
     printf("last number : ");
-    scanf("%lf", &num);
+    scanf("%d", &num);
 
     sum = (num*(num+1))/2;
 
-    printf("Total Sum = %.2lf\n", sum);
+    printf("Total Sum = %d\n", sum);
     return 0;
 }                       // problem solve 5..... code 5.5
 
@@ -1128,17 +1140,23 @@ int main()
 #include<stdio.h>
 int main()
 {
-    int a,b,t,x,gcd;
+    int a,b,t,gcd;
 
     scanf("%d\n%d",&a,&b);
 
-    if(a==0) gcd=a;
-    else if(b==0) gcd=b;
+    if(a==0)
+    {
+        gcd=a;
+    }
+    else if(b==0)
+    {
+        gcd=b;
+    }
     else
     {
         while(b!=0)
         {
-            t=b;
+            t=b;        // t=temp
             b=a%b;
             a=t;
         }
@@ -1163,31 +1181,133 @@ int main()
 #include<stdio.h>
 
 int main() {
-   int a, b, max, step, lcm;
+    int a, b, gcd;
 
-   printf("a : ");
-   scanf("%d", &a);
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
 
-   printf("b : ");
-   scanf("%d", &b);
+    while (b != 0) {
+        int temp = b;
+        b = a % b;
+        a = temp;
+    }
+    gcd = a;
 
-   if(a > b)
-      max = step = a;
-   else
-      max = step = b;
+    printf("GCD: %d\n", gcd);
+    return 0;
+}                   // more efficient format for 5.9 code
 
-   while(1) {
-      if(max%a == 0 && max%b == 0) {
-         lcm = max;
-         break;
-      }
 
-      max += step;
-   }
 
-   printf("LCM is %d", lcm);
-   return 0;
-}           //prob solve 7.1 ...... finding LCM ....
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int a,b,temp,gcd;
+    scanf("%d %d",&a,&b);
+
+    if(a==0 || b==0 )
+    {
+        gcd=0;
+    }
+    else if(a==1 || b==1)
+    {
+        gcd=1;
+    }
+    else
+    {
+        while(b!=0)
+        {
+            temp=b;
+            b=a%b;
+            a=temp;
+        }
+        gcd=a;
+    }
+    printf("GCD is %d\n", gcd);
+    return 0;
+}                   // done by me quite differently by using new conditions ..
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int gcd(int a, int b)
+{
+    if (b == 0)
+    {
+        return a;
+    }
+    return gcd(b, a%b);     //recursive call.. recursion example and an easy way to get gcd by creating function and with euclidean algorithm
+}
+
+int main()
+{
+    int num1, num2;
+
+    printf("Enter two numbers: ");
+    scanf("%d %d", &num1, &num2);
+
+    printf("GCD of %d and %d is %d\n", num1, num2, gcd(num1, num2));
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int gcd(int a, int b)
+{
+    if (b == 0)
+    {
+        return a;
+    }
+    return gcd(b, a%b);
+}
+
+int lcm(int a, int b)
+{
+    return (a * b) / gcd(a, b);
+}
+
+int main()
+{
+    int num1, num2;
+
+    printf("Enter two numbers: ");
+    scanf("%d %d", &num1, &num2);
+
+    printf("LCM of %d and %d is %d\n", num1, num2, lcm(num1, num2));
+
+    return 0;
+}
+
 
 
 
@@ -1277,6 +1397,8 @@ int main()
 
 
 
+
+
 #include <stdio.h>
 int main()
 {
@@ -1299,29 +1421,23 @@ int main()
 
 
 
-
-
 #include <stdio.h>
 int main()
 {
-    int ara[10] = {10, 20, 30, 40, 50, 60, 70, 80, 90, 100};
+    int ara[] = {10, 20, 30, 40, 50, 60, 70, 80, 90, 100};
     int ara2[10];
     int i, j;
 
-    for(i = 0, j = 9; i < 10; i++, j--)
-        {
+    for(i=0, j=9; i<10; i++, j--)
+    {
         ara2[j] = ara[i];
-        }
+    }
 
-        for(i = 0; i < 10; i++)
-        {
+    for(i=0; i<10; i++)
+    {
         ara[i] = ara2[i];
-        }
-
-        for(i = 0; i < 10; i++)
-        {
         printf("%dth element is : %d\n",i, ara[i]);
-        }
+    }
     return 0;
 }                           // code 6.5
 
@@ -1337,29 +1453,25 @@ int main()
 
 
 
+
 #include <stdio.h>
+int main()
+{
+    int ara[] = {10, 20, 30, 40, 50, 60, 70, 80, 90, 100};
+    int i, j, temp;
 
-void reverseArrayExtraArray(int arr[], int size) {
-    int reversedArr[size];
-    for (int i = 0; i < size; i++) {
-        reversedArr[i] = arr[size - i - 1];
+    for(i=0, j=9; i<10; i++, j--)
+    {
+        temp = ara[j];
+        ara[j] = ara[i];
+        ara[i] = temp;
     }
-
-    printf("Reversed Array: ");
-    for (int i = 0; i < size; i++) {
-        printf("%d ", reversedArr[i]);
+    for(i=0; i<10; i++)
+    {
+        printf("%d\n", ara[i]);
     }
-}
-
-int main() {
-    int originalArr[] = {1, 2, 3, 4, 5};
-    int size = sizeof(originalArr) / sizeof(originalArr[0]);
-
-    reverseArrayExtraArray(originalArr, size);
-
     return 0;
-}                        // reversed array code taken from geekfromgeek
-
+}               // code 6.6   (6.5 but without using 2nd array
 
 
 
@@ -1414,21 +1526,58 @@ int main()
 
 #include <stdio.h>
 int main()
+{
+    int ft_marks[40] = {83, 86, 97, 95, 93, 95, 86, 52, 49, 41, 42, 47, 90,
+59, 63, 86, 40, 46, 92, 56, 51, 48, 67, 49, 42, 90, 42, 83, 47, 95, 69, 82,
+82, 58, 69, 67, 53, 56, 71, 62},
+    st_marks[40] = {86, 97, 95, 93, 95, 86, 52, 49, 41, 42, 47, 90, 59, 63,
+86, 40, 46, 92, 56, 51, 48, 67, 49, 42, 90, 42, 83, 47, 95, 69, 82, 82, 58,
+69, 67, 53, 56, 71, 62, 49},
+    final_marks[40] = {87, 64, 91, 43, 89, 66, 58, 73, 99, 81, 100, 64, 55,
+69, 85, 81, 80, 67, 88, 71, 62, 78, 58, 66, 98, 75, 86, 90, 80, 85, 100, 64,
+55, 69, 85, 81, 80, 67, 88, 71};
+
+    int i;
+    double total;
+
+    for(i=0;i<40;i++)
+    {
+        total =  ft_marks[i] / 4.0 + st_marks[i] / 4.0 + final_marks[i] / 2.0;
+        printf("Roll No : %d\tTotal Marks : %0.0lf\n", i + 1, total);
+    }
+    return 0;               // code 6.7 in one loop and in a better way
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+int main()
     {
     int marks, i, count;
     int total_marks[] = {86, 78, 94, 68, 92, 78, 64, 62, 72, 61, 72, 66, 65,
     65, 80, 72, 62, 68, 81, 62, 56, 68, 58, 56, 82, 70, 74, 78, 76, 84, 88, 73,
     62, 66, 76, 70, 67, 65, 77, 63};
-    for(marks = 50; marks <= 100; marks++) {
-    count = 0;
-    for(i = 0; i < 40; i++)
+    for(marks = 50; marks <= 100; marks++)
+    {
+        count = 0;
+        for(i = 0; i < 40; i++)
         {
-        if(total_marks[i] == marks)
+            if(total_marks[i] == marks)
             {
-            count++;
+                count++;
             }
         }
-    printf("Marks: %d Count: %d\n", marks, count);
+        printf("Marks: %d Count: %d\n", marks, count);
     }
     return 0;
 }                   //code 6.8
@@ -1454,19 +1603,20 @@ int main()
 
     int marks_count[101];
     for(i = 0; i < 101; i++)
-        {
+    {
         marks_count[i] = 0;
-        }
-        for(i = 0; i < 40; i++)
-        {
+    }
+    for(i = 0; i < 40; i++)
+    {
         marks_count[total_marks[i]]++;
-        }
-        for(i = 50; i <= 100; i++)
-        {
+    }
+    for(i = 50; i <= 100; i++)
+    {
         printf("Marks: %d Count: %d\n", i, marks_count[i]);
-        }
-        return 0;
+    }
+    return 0;
 }               //code 6.9
+
 
 
 
@@ -1482,25 +1632,67 @@ int main()
 
 #include <stdio.h>
 int main()
-    {
+{
     int i, j;
     int total_marks[] = {6, 7, 4, 6, 9, 7, 6, 2, 4, 3, 4, 1};
     int marks_count[11];
+
     for(i = 0; i < 11; i++)
-        {
+    {
         marks_count[i] = 0;
-        }
-        for(i = 0; i < 12; i++)
-        {
+    }
+    for(i = 0; i < 12; i++)
+    {
         marks_count[total_marks[i]]++;
         for(j = 0; j <= 10; j++)
         {
-        printf("%d ", marks_count[j]);
+            printf("%d ", marks_count[j]);
         }
         printf("\n");
-        }
+    }
     return 0;           //code 6.10
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//understanding of temp and count
+
+#include <stdio.h>
+
+int main() {
+    int temp; // Declare a variable named temp
+    int count; // Declare a variable named count
+
+    // Initialize count to 0
+    count = 0;
+
+    // Use a loop to perform some operations
+    for (int i = 0; i < 10; i++) {
+        // Generate a temporary value based on the loop counter
+        temp = i * 2;
+
+        // Increment the count
+        count++;
+
+        // Print the temporary value and count
+        printf("Temporary Value: %d, Count: %d\n", temp, count);
+    }
+
+    return 0;
+}
+
+
 
 
 
@@ -1522,7 +1714,6 @@ int add(double n1, double n2)
     return sum;
 }
 
-
 int main()
 {
     double a,b,c;
@@ -1543,6 +1734,7 @@ int main()
 
 
 
+
 #include<stdio.h>
 
 double add(double n1, double n2, double n3)
@@ -1550,7 +1742,6 @@ double add(double n1, double n2, double n3)
     double sum = n1 + n2 + n3;
     return sum;
 }
-
 
 int main()
 {
@@ -1577,13 +1768,13 @@ int main()
 
 #include<stdio.h>
 
-double add(double x, double y);   // we have to declare the created function if we gonna write it after int main function.
+double add(double n1, double n2);   // we have to declare the created function if we gonna write it after int main function.
 
 int main()
 {
     double a=2.8, b=2.7, c;
     c=add(a,b);
-    printf("%lf/n",c);
+    printf("%lf\n",c);
     return 0;
 }
 
@@ -1607,6 +1798,7 @@ double add(double n1, double n2)
 
 
 #include <stdio.h>
+
 int test_function(int x)
 {
     int y = x;
@@ -1621,7 +1813,40 @@ int main()
 
     printf("%d %d %d\n", x, y, z);
     return 0;
-}               // code 7.6
+}               // code 7.6   outpput 10 20 200
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int x = 10, y = 20, z = 30;
+int test_function(int x)
+{
+    x = 20, y = 40, z = 30;
+    int y = x;
+    x = 2 * y;
+    return (x * y);
+}
+
+int main()
+{
+    int x = 10, y = 20, z = 30;
+    z = test_function(x);
+
+    printf("%d %d %d\n", x, y, z);
+    return 0;
+}               // code 7.6 did differently .. output 10 20 800
+
 
 
 
@@ -1641,14 +1866,16 @@ double pi = 3.14;     // global variable
 void my_fnc()
 {
  pi = 3.1416; // it's a local variable .. changed the value of pi
- return;  // we used return there but we don't need this return cause oid doesn't return anything so it's our wish to use this return
+ return;  // we used return there but we don't need this return cause void doesn't return anything so it's our wish to use this return
 }
 
 int main()
 {
     printf("%.2lf\n", pi);  // output will be 3.14
+
     my_fnc();
     printf("%.4lf\n", pi);   // output will be 3.1416
+
     return 0;
 }
 
@@ -1693,8 +1920,401 @@ int fmax(int ara[], int n)
         }
     }
     return max;
-}                               /// code 7.7
+}                               // code 7.7
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+// Function to find the minimum value in an array
+int findMin(int arr[], int size) {
+    int min = arr[0]; // Assume the first element as the minimum
+
+    // Iterate through the array
+    for (int i = 1; i < size; i++) {
+        // Update min if current element is smaller
+        if (arr[i] < min) {
+            min = arr[i];
+        }
+    }
+
+    return min; // Return the minimum value
+}
+
+int main() {
+    int arr[] = {4, 7, 2, 9, 1, 5, 8}; // Sample array
+    int size = sizeof(arr) / sizeof(arr[0]); // Calculate the size of the array
+
+    // Call the function to find the minimum value
+    int min = findMin(arr, size);
+
+    // Print the minimum value
+    printf("Minimum value in the array: %d\n", min);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+// Function to find the sum of elements in an array
+int findSum(int arr[], int size) {
+    int sum = 0; // Initialize sum to zero
+
+    // Iterate through the array
+    for (int i = 0; i < size; i++) {
+        // Add each element to the sum
+        sum += arr[i];
+    }
+
+    return sum; // Return the sum
+}
+
+int main() {
+    int arr[] = {4, 7, 2, 9, 1, 5, 8}; // Sample array
+    int size = sizeof(arr) / sizeof(arr[0]); // Calculate the size of the array
+
+    // Call the function to find the sum of elements
+    int sum = findSum(arr, size);
+
+    // Print the sum of elements
+    printf("Sum of elements in the array: %d\n", sum);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+// Function to find the sum of elements in an array
+int findSum(int arr[], int size) {
+    int sum = 0; // Initialize sum to zero
+
+    // Iterate through the array
+    for (int i = 0; i < size; i++) {
+        // Add each element to the sum
+        sum += arr[i];
+    }
+
+    return sum; // Return the sum
+}
+
+// Function to find the average of elements in an array
+double findAverage(int arr[], int size) {
+    // Calculate the sum of elements using the findSum function
+    int sum = findSum(arr, size);
+
+    // Calculate the average
+    double average = (double)sum / size;
+
+    return average; // Return the average
+}
+
+int main() {
+    int arr[] = {4, 7, 2, 9, 1, 5, 8}; // Sample array
+    int size = sizeof(arr) / sizeof(arr[0]); // Calculate the size of the array
+
+    // Call the function to find the average of elements
+    double average = findAverage(arr, size);
+
+    // Print the average of elements
+    printf("Average of elements in the array: %.2lf\n", average);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Array facts practice all in one type without function
+
+#include <stdio.h>
+
+int main()
+{
+ 	int myNumbers[] = {7, 100, 23, 50, 6, 21, 100, 3, 50, 1000};
+
+	int length, firstElement, sixthElement, lastElement;
+
+    int maxNumber, minNumber = myNumbers[0];
+
+	length = sizeof(myNumbers)/sizeof(myNumbers[0]);
+
+    firstElement = myNumbers[0];
+    sixthElement = myNumbers[5];
+
+    lastElement = myNumbers[length - 1];
+
+
+    for (int i = 0; i < length; i++)
+        {
+            if (myNumbers[i] > maxNumber)
+                {
+                    maxNumber = myNumbers[i];
+                }
+            else if (myNumbers[i] < minNumber)
+                {
+                    minNumber = myNumbers[i];
+                }
+        }
+
+
+    printf("Array Length : %d\n\n", length);
+
+    printf("First Element is : %d\n", firstElement);
+    printf("Sixth Element is : %d\n", sixthElement);
+    printf("Last Element is : %d\n\n\n", lastElement);
+
+    printf("The maximum integer number in the array is: %d\n", maxNumber);
+    printf("The minimum integer number in the array is: %d\n\n", minNumber);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// all in one max min sum average from an array
+
+#include <stdio.h>
+
+int arr[] = {3, 4, 6, 7, 14, 16, 21, 23, 99, 298};   // global array declaration
+
+// Function to find the maximum value in an array
+int findMax(int arr[], int size) {
+    int max = arr[0]; // Assume the first element as the maximum
+
+    // Iterate through the array
+    for (int i = 1; i < size; i++) {
+        // Update max if current element is greater
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+
+    return max; // Return the maximum value
+}
+
+// Function to find the minimum value in an array
+int findMin(int arr[], int size) {
+    int min = arr[0]; // Assume the first element as the minimum
+
+    // Iterate through the array
+    for (int i = 1; i < size; i++) {
+        // Update min if current element is smaller
+        if (arr[i] < min) {
+            min = arr[i];
+        }
+    }
+
+    return min; // Return the minimum value
+}
+
+// Function to find the sum of elements in an array
+int findSum(int arr[], int size) {
+    int sum = 0; // Initialize sum to zero
+
+    // Iterate through the array
+    for (int i = 0; i < size; i++) {
+        // Add each element to the sum
+        sum += arr[i];
+    }
+
+    return sum; // Return the sum
+}
+
+// Function to find the average of elements in an array
+double findAverage(int arr[], int size) {
+    // Calculate the sum of elements using the findSum function
+    int sum = findSum(arr, size);
+
+    // Calculate the average
+    double average = (double)sum / size;
+
+    return average; // Return the average
+}
+
+int main() {
+    //int arr[] = {4, 7, 2, 9, 1, 5, 8}; // Sample array .. I can declare the array elements in here(local) and global way as I did in this code
+
+    int size = sizeof(arr) / sizeof(arr[0]); // Calculate the size of the array
+
+    // Call the functions to find max, min, sum, and average
+    int max = findMax(arr, size);
+    int min = findMin(arr, size);
+    int sum = findSum(arr, size);
+    double average = findAverage(arr, size);
+
+    // Print the results
+    printf("Maximum value in the array: %d\n", max);
+    printf("Minimum value in the array: %d\n", min);
+    printf("Sum of elements in the array: %d\n", sum);
+    printf("Average of elements in the array: %.2lf\n", average);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int globalArray[5] = {1, 2, 3, 4, 5}; // Global array
+
+void function() {
+    int localArray[3] = {6, 7, 8}; // Local array
+    printf("Global array inside function: %d\n", globalArray[0]); // Accessing global array inside function
+    printf("Local array inside function: %d\n", localArray[0]); // Accessing local array inside function
+}
+
+int main() {
+    int localArray[2] = {9, 10}; // Local array
+    printf("Global array in main: %d\n", globalArray[0]); // Accessing global array in main
+    printf("Local array in main: %d\n", localArray[0]); // Accessing local array in main
+    function();
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int Array[5] = {1, 2, 3, 4, 5}; // Global array
+
+void function()
+{
+    int Array[3] = {6, 7, 8}; // Local array
+    printf("Global array inside function not working for local array: %d\n\n", Array[0]); // output will be 6
+    printf("If I don't print this inside function array elements then the output will come from Global Array Elements.\n\n");
+}
+
+int main()
+{
+    int Array[2] = {9, 10}; // Local array
+    printf("Global and inside function's array is not working for local variable in main cause of main() array[] and the output : %d\n\n", Array[0]); // output 9
+    function();
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+// Function to calculate the area of a circle
+double calculateArea(double radius) {
+    const double PI = 3.14159; // Define PI constant
+    double area = PI * radius * radius; // Calculate area using formula A = πr^2
+    return area; // Return the calculated area
+}
+
+int main()
+{
+    double radius, area;
+
+    // Input radius from the user
+    printf("Enter the radius of the circle: ");
+    scanf("%lf", &radius);
+
+    // Call the function to calculate the area
+    area = calculateArea(radius);
+
+    // Print the result
+    printf("The area of the circle with radius %.2lf is %.2lf\n", radius, area);
+
+    return 0;
+}
 
 
 
@@ -1712,35 +2332,21 @@ int fmax(int ara[], int n)
 
 
 #include<stdio.h>
-
-double area(double n1, double n2)
+void test_function(int ara[])
 {
-    double a = n1*n2;
-    return a;
+    ara[0] = 100;
+    return;
 }
-
 int main()
 {
-    double r,a;
-    double pi = 3.14;
+    int ara [] = {1, 2, 3, 4, 5};
+    printf("%d\n", ara[0]);    //output 1
 
-    printf("Pi = %.2lf\n", pi);
-
-    printf("r = ");
-    scanf("%lf", &r);
-
-    a = area(pi,r);
-
-    printf("circle's area : %.2lf\n", a);
+    test_function(ara);
+    printf("%d\n", ara[0]);  // output 100
 
     return 0;
-}                     // code 7.9 from subeen's book problem solving by ownself ... circle's area prcaticed this code by using function
-
-
-
-
-
-
+}     //code 7.8
 
 
 
@@ -1761,30 +2367,38 @@ int main()
 int main() {
     int ara[] = {1, 4, 6, 8, 9, 11, 14, 15, 20, 25, 33, 83, 87, 97, 99, 100};
     int low_indx = 0;
-    int high_indx = 15;
+    int high_indx = 15;   // if we don't know the size of array then  int right = size - 1;
     int mid_indx;
-    int num = 97;
+    int num;
+    scanf("%d", &num);
 
-    while (low_indx <= high_indx) {
-        mid_indx = (low_indx + high_indx) / 2;
+    while (low_indx <= high_indx)
+        {
+            mid_indx = (low_indx + high_indx) / 2;
 
-        if (num == ara[mid_indx]) {
-            break;
+            if (num == ara[mid_indx])
+            {
+                break;
+            }
+
+            if (num < ara[mid_indx])
+            {
+                high_indx = mid_indx - 1;
+            }
+            else
+            {
+                low_indx = mid_indx + 1;
+            }
         }
 
-        if (num < ara[mid_indx]) {
-            high_indx = mid_indx - 1;
-        } else {
-            low_indx = mid_indx + 1;
+        if (low_indx > high_indx)
+        {
+            printf("%d is not in the array\n", num);
         }
-    }
-
-    if (low_indx > high_indx) {
-        printf("%d is not in the array\n", num);
-    } else {
-        printf("%d is found in the array. It is the %dth element of the array.\n", ara[mid_indx], mid_indx);
-    }
-
+        else
+        {
+            printf("%d is found in the array. It is the %dth element of the array.\n", ara[mid_indx], mid_indx);
+        }
     return 0;               // code 8.1 by while loop
 }
 
@@ -1805,27 +2419,37 @@ int main() {
 int main() {
     int ara[] = {1, 4, 6, 8, 9, 11, 14, 15, 20, 25, 33, 83, 87, 97, 99, 100};
     int low_indx = 0;
-    int high_indx = 15;
+    int high_indx = 15;   // if we don't know the size of array then  int right = size - 1;
     int mid_indx;
-    int num = 97;
+    int num;
+    scanf("%d", &num);
 
-    for (; low_indx <= high_indx; ) {
-        mid_indx = (low_indx + high_indx) / 2;
-        if (num == ara[mid_indx]) {
-            break;
-        }
-        if (num < ara[mid_indx]) {
-            high_indx = mid_indx - 1;
-        } else {
-            low_indx = mid_indx + 1;
-        }
-    }
+    for (; low_indx <= high_indx; )
+        {
+            mid_indx = (low_indx + high_indx) / 2;
 
-    if (low_indx > high_indx) {
-        printf("%d is not in the array\n", num);
-    } else {
-        printf("%d is found in the array. It is the %dth element of the array.\n", ara[mid_indx], mid_indx);
-    }
+            if (num == ara[mid_indx])
+            {
+                break;
+            }
+            if (num < ara[mid_indx])
+            {
+                high_indx = mid_indx - 1;
+            }
+            else
+            {
+                low_indx = mid_indx + 1;
+            }
+        }
+
+        if (low_indx > high_indx)
+        {
+            printf("%d is not in the array\n", num);
+        }
+        else
+        {
+            printf("%d is found in the array. It is the %dth element of the array.\n", ara[mid_indx], mid_indx);
+        }
 
     return 0;
 }                       // code 8.1 (using for loop instead of while loop
@@ -1840,6 +2464,116 @@ int main() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+// Function to perform binary search
+int binarySearch(int arr[], int size, int key) {
+    int left = 0;
+    int right = size - 1;
+
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
+
+        // If the key is present at the middle
+        if (arr[mid] == key) {
+            return mid;
+        }
+
+        // If the key is smaller, ignore the right half
+        else if (arr[mid] > key) {
+            right = mid - 1;
+        }
+
+        // If the key is larger, ignore the left half
+        else {
+            left = mid + 1;
+        }
+    }
+
+    // If the key is not found, return -1
+    return -1;
+}
+
+int main() {
+    int arr[] = {1, 3, 5, 7, 9, 11, 13, 15, 17, 19};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    int key, index;
+
+    printf("Enter the key to search: ");
+    scanf("%d", &key);
+
+    // Call binarySearch function to search for the key
+    index = binarySearch(arr, size, key);
+
+    if (index != -1) {
+        printf("Key found at index %d\n", index);
+    } else {
+        printf("Key not found\n");
+    }
+
+    return 0;
+}                   // 8.1 binary search with a function
+
+
+
+
+
+
+
+
+// withot function binary search
+#include <stdio.h>
+
+int main() {
+    int arr[] = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    int target = 12;
+
+    int left = 0;
+    int right = size - 1;
+    int index = -1; // Initialize index to -1, indicating not found
+
+    // Perform binary search
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
+
+        // If target is found at mid
+        if (arr[mid] == target) {
+            index = mid;
+            break;
+        }
+
+        // If target is smaller, ignore right half
+        else if (arr[mid] > target) {
+            right = mid - 1;
+        }
+
+        // If target is larger, ignore left half
+        else {
+            left = mid + 1;
+        }
+    }
+
+    // Print result
+    if (index != -1) {
+        printf("Element %d found at index %d\n", target, index);
+    } else {
+        printf("Element %d not found in the array\n", target);
+    }
+
+    return 0;
+}
 
 
 
@@ -1926,29 +2660,28 @@ int main()
 
 
 
-
 #include <stdio.h>
-int string_length(char str[])
+int string_length(char country[])
 {
     int i, length = 0;
-    for(i = 0; str[i] != '\0'; i++) {
+    for(i = 0; country[i] != '\0'; i++)
+    {
         length++;
-        }
-    return length;
     }
+    return length;
+}
 
 int main()
 {
     char country[100];
     int length;
-    while(1 == scanf("%s", country)) {
+    while(1 == scanf("%s", &country))
+    {
         length = string_length(country);
         printf("length: %d\n", length);
     }
     return 0;
 }                   //code 9.5
-
-
 
 
 
@@ -1971,7 +2704,7 @@ int main()
         printf("%s\n", ara);
     }
     return 0;
-}
+}               //code 9.6
 
 
 
@@ -2527,14 +3260,6 @@ int main()
 
 
 */
-
-
-
-
-
-
-
-
 
 
 
