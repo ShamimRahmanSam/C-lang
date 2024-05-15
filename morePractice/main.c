@@ -11413,12 +11413,368 @@ int main() {
 
 
 
-*/
+
 
 #include <stdio.h>
 
 int main() {
     int x = 5;
-    printf("%d\n", x++ + ++x);
+    printf("%d\n", x++ + ++x );  // 5+7 = 12 //x++: This is the post-increment operator. It means the current value of x (which is 5) is used in the expression, and then x is incremented. So, x++ evaluates to 5, and x becomes 6. ++x: This is the pre-increment operator. It means x is incremented first, and then its value is used in the expression. So, ++x increments x (which is now 6) to 7, and ++x evaluates to 7. Now, the expression becomes 5 + 7.
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+*/
+
+/*
+
+
+
+1. The output of sizeof(char) in C is 1.
+   In C, the sizeof operator returns the size in bytes of its operand.
+   Since the size of a char in C is defined to be exactly 1 byte, sizeof(char) will always evaluate to 1.
+
+
+
+
+
+2.  The difference between ++i and i++ lies in when the increment operation is applied to the variable i.
+
+    ++i (pre-increment): This operation increments the value of i by 1, and then returns the updated value of i. So if i is, for example, 5, ++i would increment it to 6 and return 6.
+
+    i++ (post-increment): This operation also increments the value of i by 1, but it returns the original value of i before the increment. So if i is 5, i++ would return 5, but after this operation, i would be 6.
+
+    Here's a simple example to illustrate the difference:
+
+    Copy code
+    #include <stdio.h>
+
+    int main() {
+        int i = 5;
+        printf("Before increment: i = %d\n", i);
+        printf("Using pre-increment: %d\n", ++i);
+        printf("After pre-increment: i = %d\n", i);
+
+        i = 5; // Reset i to 5
+
+        printf("Before increment: i = %d\n", i);
+        printf("Using post-increment: %d\n", i++);
+        printf("After post-increment: i = %d\n", i);
+
+        return 0;
+    }
+
+    output:
+    Before increment: i = 5
+    Using pre-increment: 6
+    After pre-increment: i = 6
+    Before increment: i = 5
+    Using post-increment: 5
+    After post-increment: i = 6
+    As you can see, with pre-increment (++i), the value of i is incremented before it's used in the expression. With post-increment (i++), the value is used in the expression first and then incremented.
+
+
+
+
+
+
+
+
+
+
+3.  int* ptr and int *ptr are used to declare pointers to integers.
+    However, they represent the same thing and there's no difference between them in terms of functionality;
+    it's just a matter of coding style and personal preference.
+
+
+
+
+
+
+
+
+4. swap two variables without using a temporary variable
+    by utilizing arithmetic operations or bitwise operations. Here's a common approach using arithmetic operations:
+
+
+    #include <stdio.h>
+    int main() {
+        int a = 5;
+        int b = 10;
+
+        printf("Before swap: a = %d, b = %d\n", a, b);
+
+        // Swapping without temporary variable
+        a = a + b;
+        b = a - b;
+        a = a - b;
+
+        printf("After swap: a = %d, b = %d\n", a, b);
+
+        return 0;
+    }
+
+    Output:
+    Before swap: a = 5, b = 10
+    After swap: a = 10, b = 5
+
+
+
+
+
+
+
+
+5.  Difference between == and = in C:
+    == is the equality operator used for comparison in C. It checks if two values are equal.
+    = is the assignment operator used to assign a value to a variable in C. It assigns the value on the right-hand side to the variable on the left-hand side.
+    For example:
+    int a = 5;
+    int b = 5;
+    if (a == b) {
+        // This block will be executed because a is equal to b
+    }
+
+
+
+
+
+
+
+
+
+//binary search
+#include<stdio.h>
+int main()
+{
+    int a[] = {3,6,7,9,11,14,16,20,21,23,26,27,29,31,298,299};
+
+    int n,length,left,right,mid;
+
+    scanf("%d", &n);
+
+    length = sizeof(a)/sizeof(a[0]);
+
+    left=0;
+    right=length - 1;
+
+    while(left<=right)
+    {
+        mid = (left+right)/2;
+
+        if(a[mid]==n)
+        {
+            break;
+        }
+        else if(a[mid]<n)
+        {
+            left=mid+1;
+        }
+        else
+        {
+            right=mid-1;
+        }
+    }
+
+    if(left>right)
+    {
+        printf("%d is not found",n);
+    }
+    else
+    {
+        printf("%d is found in %dth index",n, mid);
+    }
+    return 0;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+//sorting array by bubble sort algo
+#include<stdio.h>
+int main()
+{
+    int a[] = {7,1,11,2,9,16,298,299,333,14,100,3,31,6,21};
+
+    int i, j, temp, length;
+
+    length = sizeof(a)/sizeof(a[0]);
+    printf("%d\n", length);
+    printf("before sorting last element is %d\n", a[length-1]);
+
+    for(i=0; i<length; i++)
+    {
+        for(j=i+1; j<length; j++)
+        {
+            if(a[i]>a[j])  // a[i]<a[j] for descending order
+            {
+                temp = a[i];
+                a[i] = a[j];
+                a[j] = temp;
+            }
+        }
+
+        printf("%d ", a[i]);
+    }
+
+    printf("\nlast element after sorting is %d ", a[length-1]);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+//prime number
+#include<stdio.h>
+#include<math.h>
+
+int prime(int n)
+{
+    int i, root;
+
+    if(n==2) return 1;
+    if(n%2==0) return 0;
+
+    root = sqrt(n);
+
+    for(i=3; i<=root; i=i+2)
+    {
+        if(n%i==0) return 0;
+    }
+
+    return 1;
+}
+
+int main()
+{
+    int n;
+
+    while(1)
+    {
+        printf("enter number: ");
+        scanf("%d", &n);
+
+        if(n==0) break;
+
+        if(1 == prime(n))
+        {
+            printf("%d is a Prime Number\n", n);
+        }
+        else
+        {
+            printf("Not Prime\n");
+        }
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+//namta by 2d array
+#include<stdio.h>
+int main()
+{
+    int namta[20][10];
+    int row,col,evcount,odcount,sum;
+
+    for(row=0; row<20; row++)
+    {
+        for(col=0; col<10; col++)
+        {
+            namta[row][col] = (row+1) * (col+1);
+            printf("%d x %d = %d\n", row+1, col+1, namta[row][col]);
+
+            if(namta[row][col]%2 == 0)
+            {
+                evcount++;
+            }
+            else
+            {
+                odcount++;
+            }
+
+            sum += namta[row][col];
+        }
+        printf("\n\n");
+    }
+
+    printf("even : %d\t Odd : %d\t sum = %d\n", evcount,odcount,sum);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int i=10;
+    while(i<0) // condition not matched so outputt will be blank screen instead of infinity loop i>0
+    {
+        printf("%d\n",i);
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+*/
+
+#include<stdio.h>
+int main()
+{
+    int i = 0;
+    while(i++) // condition not matched so outputt will be blank screen instead of infinity loop i>0
+    {
+        printf("Hello");
+        //continue; // infinity loop .. break use korle  1 time print hobe
+    }
     return 0;
 }
