@@ -3264,4 +3264,1148 @@ int main()
 
 
 
+//all square pattern in one
+//square shape with any character like *** *** ***...
+
+#include<stdio.h>
+int main()
+{
+    int i,j,s,row,col;
+
+    printf("ROWS AND COLUMNS : ");
+    scanf("%d %d", &row, &col);  // 1 input can be enough if we use the same input in nested loops
+
+    printf("character is : ");
+    scanf(" %c", &s);
+
+    printf("\nThe Square shape\n\n");
+
+    for(i=1; i<=row; i++)
+    {
+        for(j=1; j<=col; j++)
+        {
+            printf("%c ", s);
+        }
+        printf("\n");
+    }
+
+    printf("\n\n");
+
+    printf("\nThe Square shape\n\n");
+
+    for(i=1; i<=row; i++)
+    {
+        for(j=1; j<=col; j++)
+        {
+            printf("%d ", j);  // printf("%d ", i) // check the output as we want row as output instead of column
+        }
+        printf("\n");
+    }
+
+    printf("\n\n");
+
+    for(i=1; i<=row; i++)
+    {
+        for(j=1; j<=col; j++)
+        {
+            printf("%d ", i);  // printf("%d ", i) // check the output as we want row as output instead of column
+        }
+        printf("\n");
+    }
+
+    printf("\n\n\n\n\n");
+
+    for(i=0; i<row; i++)
+    {
+        for(j=0; j<col; j++)  // changed both i, j  condition a lil bit to get the proper output as i want
+        {
+            printf("%c ", 'A' + j); // printf("%c ", 'a' + j);    // printf("%c ", 'A' + i);     // printf("%c ", 'a' + i);
+            // check the output as we want row as output instead of column
+        }
+        printf("\n");
+    }
+
+    printf("\n\n");
+
+    for(i=0; i<row; i++)
+    {
+        for(j=0; j<col; j++)  // changed both i, j  condition a lil bit to get the proper output as i want
+        {
+            printf("%c ", 'A' + i); // printf("%c ", 'a' + j);    // printf("%c ", 'A' + i);     // printf("%c ", 'a' + i);
+            // check the output as we want row as output instead of column
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//all in one
+//right half pyramid all in one (with numbers 123 12 1 & characters ABC AB A and abc ab a and also any characters like *** ** *....even also with not only column system but also with row system
+
+#include<stdio.h>
+int main()
+{
+    int i,j,rows;
+    char s;
+
+    printf("Rows are : ");
+    scanf("%d", &rows);
+
+    printf("\n");
+
+    printf("character : ");
+    scanf(" %c", &s);
+
+    printf("\nHere's the right half pyramid for similar characters\n\n");
+
+    for(i=1; i<=rows; i++)
+    {
+        for(j=1; j<=i; j++)
+        {
+            printf("%c ", s);
+        }
+        printf("\n");
+    }
+
+    printf("\n\n\n");
+
+
+    printf("\nHere's the right half pyramid for 123 or abc\n\n");
+
+    for(i=1; i<=rows; i++)
+    {
+        for(j=1; j<=i; j++)  //changed j=1 by j=0 to get the output as i want
+        {
+            printf("%d ", j);   // j+1 cause j=1 so 0+1 = 1
+        }
+        printf("\n");
+    }
+
+    printf("\n\n");
+
+    for(i=1; i<=rows; i++)
+    {
+        for(j=1; j<=i; j++)  //changed j=1 by j=0 to get the output as i want
+        {
+            printf("%d ", i);   // j+1 cause j=1 so 0+1 = 1
+        }
+        printf("\n");
+    }
+
+    printf("\n\n\n\n");
+
+
+    for(i=0; i<rows; i++)
+    {
+        for(j=0; j<=i; j++)  //changed j=1 by j=0 to get the output as i want
+        {
+            printf("%c ", 'A' + j);  // here's no needed j+1  cause A is in 0 value and B in value 1 SO j+1 means it will start from B
+            //printf("%c ", 'a' + j) // for small letters output
+        }
+        printf("\n");
+    }
+
+    printf("\n\n");
+
+    for(i=0; i<rows; i++)
+    {
+        for(j=0; j<=i; j++)  //changed j=1 by j=0 to get the output as i want
+        {
+            printf("%c ", 'A' + i);  //printf("%c ", 'a' + i) // for small letters output
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//all in one
+//inverted right half pyramid with numbers 123 12 1 & characters ABC AB A and abc ab a and also any characters like *** ** *....even also with not only column system but also with row system
+
+#include<stdio.h>
+int main()
+{
+    int i,j,rows;
+    char s;
+
+    printf("Rows are : ");
+    scanf("%d", &rows);
+
+    printf("\n");
+
+    printf("character : ");
+    scanf(" %c", &s);
+
+    printf("\nHere's the inverted right half pyramid for similar characters\n\n");
+
+    for(i=0; i<rows; i++)
+    {
+        for(j=0; j<rows-i; j++)
+        {
+            printf("%c ", s);
+        }
+        printf("\n");
+    }
+
+    printf("\n\n\n");
+
+
+    printf("\nHere's the inverted right half pyramid for 123 or abc\n\n");
+
+    for(i=1; i<=rows; i++)
+    {
+        for(j=0; j<=rows-i; j++)  //changed j=1 by j=0 to get the output as i want
+        {
+            printf("%d ", j+1);   // j+1 cause j=1 so 0+1 = 1
+        }
+        printf("\n");
+    }
+
+    printf("\n\n");
+
+    for(i=1; i<=rows; i++)
+    {
+        for(j=0; j<=rows-i; j++)  //changed j=1 by j=0 to get the output as i want
+        {
+            printf("%d ", i);
+        }
+        printf("\n");
+    }
+
+    printf("\n\n\n\n");
+
+
+    for(i=1; i<=rows; i++)
+    {
+        for(j=0; j<=rows-i; j++)  //changed j=1 by j=0 to get the output as i want
+        {
+            printf("%c ", 'A' + j +2);  // here's no needed j+1  cause A is in 0 value and B in value 1 SO j+1 means it will start from B
+            //printf("%c ", 'a' + j) // for small letters output
+        }
+        printf("\n");
+    }
+
+    printf("\n\n");
+
+    for(i=0; i<rows; i++)
+    {
+        for(j=0; j<rows-i; j++)  //changed j=1 by j=0 to get the output as i want
+        {
+            printf("%c ", 'A' + i);   //printf("%c ", 'a' + i) // for small letters output
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//full pyramid with even number can be possible by this way
+#include<stdio.h>
+int main()
+{
+    int i,j,k,rows;
+
+    printf("rows are : ");
+    scanf("%d", &rows);
+
+    printf("\n\nHere's the full pyramid with even number\n\n");
+
+    for(i=1; i<=rows; i++)
+    {
+        for(j=1; j<=rows-i; j++)
+        {
+            printf(" ");
+        }
+        for(k=1; k<=i; k++)
+        {
+            printf("%d ", k);  // also can be possible with abc or aaa or with any character
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// all in one
+// left half pyramid pattern with integer numbers 123, abc and any character * or anything even also with not only column system but also with row system
+#include<stdio.h>
+int main()
+{
+    int i, j, rows;
+    char s;
+
+    printf("Rows: ");
+    scanf("%d", &rows);
+
+    printf("Character: ");
+    scanf(" %c", &s);
+
+    printf("\nHere's the left half pyramid with any character *\n\n");
+
+    for(i=0; i<rows; i++)
+    {
+        for(j=0; j<2*(rows-i)-1; j++)
+        {
+            printf(" ");
+        }
+
+        for(j=0; j<=i; j++)
+        {
+            printf("%c ", s);
+        }
+        printf("\n");
+    }
+
+    printf("\n\n\n");
+
+    printf("\n\nHere's the left pyramid for 123 and abc\n\n");
+
+    for(i=0; i<rows; i++)
+    {
+        for(j=0; j<2*(rows-i)-1; j++)
+        {
+            printf(" ");
+        }
+        for(j=0; j<=i; j++)
+        {
+            printf("%d ", j+1);
+        }
+        printf("\n");
+    }
+
+    printf("\n\n");
+
+    for(i=0; i<rows; i++)
+    {
+        for(j=0; j<2*(rows-i)-1; j++)
+        {
+            printf(" ");
+        }
+        for(j=0; j<=i; j++)
+        {
+            printf("%d ", i+1);
+        }
+        printf("\n");
+    }
+
+    printf("\n\n\n\n");
+
+
+    for(i=0; i<rows; i++)
+    {
+        for(j=0; j<2*(rows-i)-1; j++)
+        {
+            printf(" ");
+        }
+        for(j=0; j<=i; j++)
+        {
+            printf("%c ", 'A' + j);
+        }
+        printf("\n");
+    }
+
+    printf("\n\n");
+
+    for(i=0; i<rows; i++)
+    {
+        for(j=0; j<2*(rows-i)-1; j++)
+        {
+            printf(" ");
+        }
+        for(j=0; j<=i; j++)
+        {
+            printf("%c ", 'A' + i);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// all in one
+// inverted left half pyramid pattern with integer numbers 123, abc and any character * or anything even also with not only column system but also with row system
+#include<stdio.h>
+int main()
+{
+    int i, j, rows;
+    char s;
+
+    printf("Rows: ");
+    scanf("%d", &rows);
+
+    printf("Character: ");
+    scanf(" %c", &s);
+
+    printf("\nHere's the inverted left half pyramid with any character *\n\n");
+
+    for(i=0; i<rows; i++)
+    {
+        for(j=0; j<2*i; j++)
+        {
+            printf(" ");
+        }
+
+        for(j=0; j<rows-i; j++)
+        {
+            printf("%c ", s);
+        }
+        printf("\n");
+    }
+
+    printf("\n\n\n");
+
+    printf("\n\nHere's the inverted left pyramid for 123 and abc\n\n");
+
+    for(i=0; i<rows; i++)
+    {
+        for(j=0; j<2*i; j++)
+        {
+            printf(" ");
+        }
+        for(j=0; j<rows-i; j++)
+        {
+            printf("%d ", j+1);
+        }
+        printf("\n");
+    }
+
+    printf("\n\n");
+
+    for(i=0; i<rows; i++)
+    {
+        for(j=0; j<2*i; j++)
+        {
+            printf(" ");
+        }
+        for(j=0; j<rows-i; j++)
+        {
+            printf("%d ", i+1);
+        }
+        printf("\n");
+    }
+
+    printf("\n\n\n\n");
+
+
+    for(i=0; i<rows; i++)
+    {
+        for(j=0; j<2*i; j++)
+        {
+            printf(" ");
+        }
+        for(j=0; j<rows-i; j++)
+        {
+            printf("%c ", 'A' + j);
+        }
+        printf("\n");
+    }
+
+    printf("\n\n");
+
+    for(i=0; i<rows; i++)
+    {
+        for(j=0; j<2*i; j++)
+        {
+            printf(" ");
+        }
+        for(j=0; j<rows-i; j++)
+        {
+            printf("%c ", 'A' + i);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// all in one
+// Full pyramid pattern with integer numbers 123, abc and any character * or anything even also with not only column system but also with row system
+#include<stdio.h>
+int main()
+{
+    int i, j, rows;
+    char s;
+
+    printf("Rows: ");
+    scanf("%d", &rows);
+
+    printf("Character: ");
+    scanf(" %c", &s);
+
+    printf("\nHere's the full pyramid with any character *\n\n");
+
+    for(i=1; i<=rows; i++)
+    {
+        for(j=1; j<=rows-i; j++)
+        {
+            printf(" ");
+        }
+
+        for(j=1; j<=i; j++)
+        {
+            printf("%c ", s);
+        }
+        printf("\n");
+    }
+
+    printf("\n\n\n");
+
+    printf("\n\nHere's the full pyramid for 123 and abc\n\n");
+
+    for(i=1; i<=rows; i++)
+    {
+        for(j=1; j<=rows-i; j++)
+        {
+            printf(" ");
+        }
+        for(j=1; j<=i; j++)
+        {
+            printf("%d ", j);
+        }
+        printf("\n");
+    }
+
+    printf("\n\n");
+
+    for(i=1; i<=rows; i++)
+    {
+        for(j=1; j<=rows-i; j++)
+        {
+            printf(" ");
+        }
+        for(j=1; j<=i; j++)
+        {
+            printf("%d ", i);
+        }
+        printf("\n");
+    }
+
+    printf("\n\n\n\n");
+
+
+    for(i=1; i<=rows; i++)
+    {
+        for(j=1; j<=rows-i; j++)
+        {
+            printf(" ");
+        }
+        for(j=1; j<=i; j++)
+        {
+            printf("%c ", 'A' + j - 1);
+        }
+        printf("\n");
+    }
+
+    printf("\n\n");
+
+    for(i=1; i<=rows; i++)
+    {
+        for(j=1; j<=rows-i; j++)
+        {
+            printf(" ");
+        }
+        for(j=1; j<=i; j++)
+        {
+            printf("%c ", 'A' + i - 1);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// all in one
+// inverted Full pyramid pattern with integer numbers 123, abc and any character * or anything even also with not only column system but also with row system
+#include<stdio.h>
+int main()
+{
+    int i, j, rows;
+    char s;
+
+    printf("Rows: ");
+    scanf("%d", &rows);
+
+    printf("Character: ");
+    scanf(" %c", &s);
+
+    printf("\nHere's the inverted full pyramid with any character *\n\n");
+
+    for(i=rows; i>=1; i--)
+    {
+        for(j=1; j<=rows-i; j++)
+        {
+            printf(" ");
+        }
+
+        for(j=1; j<=i; j++)
+        {
+            printf("%c ", s);
+        }
+        printf("\n");
+    }
+
+    printf("\n\n\n");
+
+    printf("\n\nHere's the inverted full pyramid for 123 and abc\n\n");
+
+    for(i=rows; i>=1; i--)
+    {
+        for(j=1; j<=rows-i; j++)
+        {
+            printf(" ");
+        }
+        for(j=1; j<=i; j++)
+        {
+            printf("%d ", j);
+        }
+        printf("\n");
+    }
+
+    printf("\n\n");
+
+    for(i=rows; i>=1; i--)
+    {
+        for(j=1; j<=rows-i; j++)
+        {
+            printf(" ");
+        }
+        for(j=1; j<=i; j++)
+        {
+            printf("%d ", i);
+        }
+        printf("\n");
+    }
+
+    printf("\n\n\n\n");
+
+
+    for(i=rows; i>=1; i--)
+    {
+        for(j=1; j<=rows-i; j++)
+        {
+            printf(" ");
+        }
+        for(j=1; j<=i; j++)
+        {
+            printf("%c ", 'A' + j - 1);
+        }
+        printf("\n");
+    }
+
+    printf("\n\n");
+
+    for(i=rows; i>=1; i--)
+    {
+        for(j=1; j<=rows-i; j++)
+        {
+            printf(" ");
+        }
+        for(j=1; j<=i; j++)
+        {
+            printf("%c ", 'A' + i - 1);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// diamond shape (full + inverted full pyramid = diamond) with numbers, alphabets and characters
+#include<stdio.h>
+int main()
+{
+    int i,j,rows;
+    char s;
+
+    printf("rows:");
+    scanf("%d",&rows);
+
+    printf("character : ");
+    scanf(" %c", &s);
+
+    printf("here's the diamond with characters like *\n\n");
+
+    for(i=1; i<=rows; i++)
+    {
+        for(j=1; j<=rows-i; j++)
+        {
+            printf(" ");
+        }
+        for(j=1; j<=i; j++)
+        {
+            printf("%c ", s);
+        }
+        printf("\n");
+    }
+
+    for(i=rows-1; i>=1; i--)
+    {
+        for(j=1; j<=rows-i; j++)
+        {
+            printf(" ");
+        }
+        for(j=1; j<=i; j++)
+        {
+            printf("%c ", s);
+        }
+        printf("\n");
+    }
+
+    printf("\n\n\n\nHere's the diamond with numbers and alphabets\n\n");
+
+    for(i=1; i<=rows; i++)
+    {
+        for(j=1; j<=rows-i; j++)
+        {
+            printf(" ");
+        }
+        for(j=1; j<=i; j++)
+        {
+            printf("%d ", j);
+        }
+        printf("\n");
+    }
+
+    for(i=rows-1; i>=1; i--)
+    {
+        for(j=1; j<=rows-i; j++)
+        {
+            printf(" ");
+        }
+        for(j=1; j<=i; j++)
+        {
+            printf("%d ", j);
+        }
+        printf("\n");
+    }
+
+    printf("\n\n\n\n");
+
+
+    for(i=1; i<=rows; i++)
+    {
+        for(j=1; j<=rows-i; j++)
+        {
+            printf(" ");
+        }
+        for(j=1; j<=i; j++)
+        {
+            printf("%d ", i);
+        }
+        printf("\n");
+    }
+
+    for(i=rows-1; i>=1; i--)
+    {
+        for(j=1; j<=rows-i; j++)
+        {
+            printf(" ");
+        }
+        for(j=1; j<=i; j++)
+        {
+            printf("%d ", i);
+        }
+        printf("\n");
+    }
+
+    printf("\n\n\n\n\n\n\n");
+
+
+    for(i=1; i<=rows; i++)
+    {
+        for(j=1; j<=rows-i; j++)
+        {
+            printf(" ");
+        }
+        for(j=1; j<=i; j++)
+        {
+            printf("%c ", 'A' + j - 1);
+        }
+        printf("\n");
+    }
+
+    for(i=rows-1; i>=1; i--)
+    {
+        for(j=1; j<=rows-i; j++)
+        {
+            printf(" ");
+        }
+        for(j=1; j<=i; j++)
+        {
+            printf("%c ", 'A' + j - 1);
+        }
+        printf("\n");
+    }
+
+    printf("\n\n\n\n");
+
+
+    for(i=1; i<=rows; i++)
+    {
+        for(j=1; j<=rows-i; j++)
+        {
+            printf(" ");
+        }
+        for(j=1; j<=i; j++)
+        {
+            printf("%c ", 'A' + i - 1);
+        }
+        printf("\n");
+    }
+
+    for(i=rows-1; i>=1; i--)
+    {
+        for(j=1; j<=rows-i; j++)
+        {
+            printf(" ");
+        }
+        for(j=1; j<=i; j++)
+        {
+            printf("%c ", 'A' + i - 1);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Hourglass pattern. inverted diamond shape (inverted + full pyramid = diamond) with numbers, alphabets and characters
+#include<stdio.h>
+int main()
+{
+    int i,j,rows;
+    char s;
+
+    printf("rows:");
+    scanf("%d",&rows);
+
+    printf("character : ");
+    scanf(" %c", &s);
+
+    printf("here's the diamond with characters like *\n\n");
+
+    for(i=rows; i>=1; i--)
+    {
+        for(j=1; j<=rows-i; j++)
+        {
+            printf(" ");
+        }
+        for(j=1; j<=i; j++)
+        {
+            printf("%c ", s);
+        }
+        printf("\n");
+    }
+
+    for(i=2; i<=rows; i++)
+    {
+        for(j=1; j<=rows-i; j++)
+        {
+            printf(" ");
+        }
+        for(j=1; j<=i; j++)
+        {
+            printf("%c ", s);
+        }
+        printf("\n");
+    }
+
+    printf("\n\n\n\nHere's the diamond with numbers and alphabets\n\n");
+
+    for(i=rows; i>=1; i--)
+    {
+        for(j=1; j<=rows-i; j++)
+        {
+            printf(" ");
+        }
+        for(j=1; j<=i; j++)
+        {
+            printf("%d ", j);
+        }
+        printf("\n");
+    }
+
+    for(i=2; i<=rows; i++)
+    {
+        for(j=1; j<=rows-i; j++)
+        {
+            printf(" ");
+        }
+        for(j=1; j<=i; j++)
+        {
+            printf("%d ", j);
+        }
+        printf("\n");
+    }
+
+    printf("\n\n\n\n");
+
+
+    for(i=rows; i>=1; i--)
+    {
+        for(j=1; j<=rows-i; j++)
+        {
+            printf(" ");
+        }
+        for(j=1; j<=i; j++)
+        {
+            printf("%d ", i);
+        }
+        printf("\n");
+    }
+
+    for(i=2; i<=rows; i++)
+    {
+        for(j=1; j<=rows-i; j++)
+        {
+            printf(" ");
+        }
+        for(j=1; j<=i; j++)
+        {
+            printf("%d ", i);
+        }
+        printf("\n");
+    }
+
+    printf("\n\n\n\n\n\n\n");
+
+
+    for(i=rows; i>=1; i--)
+    {
+        for(j=1; j<=rows-i; j++)
+        {
+            printf(" ");
+        }
+        for(j=1; j<=i; j++)
+        {
+            printf("%c ", 'A' + j - 1);
+        }
+        printf("\n");
+    }
+
+    for(i=2; i<=rows; i++)
+    {
+        for(j=1; j<=rows-i; j++)
+        {
+            printf(" ");
+        }
+        for(j=1; j<=i; j++)
+        {
+            printf("%c ", 'A' + j - 1);
+        }
+        printf("\n");
+    }
+
+    printf("\n\n\n\n");
+
+    for(i=rows; i>=1; i--)
+    {
+        for(j=1; j<=rows-i; j++)
+        {
+            printf(" ");
+        }
+        for(j=1; j<=i; j++)
+        {
+            printf("%c ", 'A' + i - 1);
+        }
+        printf("\n");
+    }
+
+    for(i=2; i<=rows; i++)
+    {
+        for(j=1; j<=rows-i; j++)
+        {
+            printf(" ");
+        }
+        for(j=1; j<=i; j++)
+        {
+            printf("%c ", 'A' + i - 1);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// C program for infinite loop
+// using for, while, do-while
+#include <stdio.h>
+
+// Driver code
+int main()
+{
+    for (;;) {
+        printf("Infinite-loop\n");
+    }
+
+    while (1) {
+        printf("Infinite-loop\n");
+    }
+
+    do {
+        printf("Infinite-loop\n");
+    } while (1);
+
+    return 0;
+}
+
+
+
 

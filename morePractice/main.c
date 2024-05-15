@@ -10108,8 +10108,8 @@ int main()
 
 
 
-*/
 
+//code 11.1
 #include<stdio.h>
 int main()
 {
@@ -10126,7 +10126,1299 @@ int main()
 
         printf("Roll : %d\t Total Marks : %d\n", col+1, marks[3][col]);
     }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//code 11.1 with input system
+#include<stdio.h>
+int main()
+{
+    int marks[4][10];
+    int i, j, col;
+
+    for (i=0; i<4; i++)
+    {
+        for (j=0; j<10; j++)
+        {
+            scanf("%d", &marks[i][j]);
+        }
+    }
+
+    for(col=0; col<10; col++)
+    {
+        marks[3][col] = marks[0][col]/4.0 + marks[1][col]/4.0 + marks[2][col]/2.0;
+
+        printf("Roll : %d\t Total Marks : %d\n", col+1, marks[3][col]);
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// code 11.2
+#include <stdio.h>
+int main()
+{
+    int namta[10][10];
+    int row, col;
+    for (row = 0; row < 10; row++)
+    {
+        for(col = 0; col < 10; col++)
+        {
+            namta[row][col] = (row + 1) * (col + 1);
+            printf("%d x %d = %d\n", (row + 1), (col + 1), namta[row][col]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 11.2 withut 2d array in a normal way by for loop
+#include<stdio.h>
+int main()
+{
+    int i,j;
+
+    for(i=1; i<=20; i++)
+    {
+        for(j=1; j<=10; j++)
+        {
+            printf("%d x %d = %d\n", i, j, i*j);
+        }
+        printf("\n\n");
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//11.2 practice again
+#include<stdio.h>
+int main()
+{
+    int namta[20][10];
+    int row, col;
+
+    for(row=0; row<20; row++)
+    {
+        for(col=0; col<10; col++)
+        {
+            namta[row][col] = (row+1)*(col+1);
+            printf("%d x %d = %d\n", row+1, col+1, namta[row][col]);
+        }
+        printf("\n\n");
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int main() {
+    int namta[10][10];
+    int row, col;
+    int even_count=0, odd_count=0, sum=0;
+
+    for(row=0; row<10; row++)
+    {
+        for (col=0; col<10; col++)
+        {
+            namta[row][col] = (row+1)*(col+1);
+            printf("%d x %d = %d\n", row+1, col+1, namta[row][col]);
+
+            if (namta[row][col] % 2 == 0)
+            {
+                even_count++;
+            }
+            else
+            {
+                odd_count++;
+            }
+
+            sum += namta[row][col];
+        }
+        printf("\n\n");
+    }
+
+    printf("Number of even numbers: %d\n", even_count);
+    printf("Number of odd numbers: %d\n", odd_count);
+    printf("Sum of all numbers: %d\n", sum);
 
     return 0;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+int main()
+{
+    char saarc[7][100] = {"Bangladesh", "India", "Pakistan", "Sri Lanka", "Nepal", "Bhutan", "Maldives"};
+    int row;
+
+    for (row = 0; row < 7; row++)
+    {
+        printf("%s\n", saarc[row]);  // if we use here saarc[row][col] by taking int col at first then the output will be null null .... like this instead of saarc country names
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+//11.3
+#include <stdio.h>
+int main()
+{
+    char saarc[7][100] = {"Bangladesh", "India", "Pakistan", "Sri Lanka", "Nepal", "Bhutan", "Maldives"};
+    int row;
+
+    for (row = 0; row < 7; row++)
+    {
+        printf("%s\n", saarc[row]);  // if we use here saarc[row][col] by taking int col at first then the output will be null null .... like this instead of saarc country names
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// print all characters column wise
+// 11.4
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    char saarc[7][100] = {"Bangladesh", "India", "Pakistan", "Sri Lanka", "Nepal", "Bhutan", "Maldives"};
+    int row, col, name_length;
+
+    for (row = 0; row < 7; row++)
+    {
+        name_length = strlen(saarc[row]);
+
+        for(col = 0; col < name_length; col++)
+        {
+            printf("%c ", saarc[row][col]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// slihtly changed in printf to get row and dcol wise characters
+//11.5 code of subben's book
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    char saarc[7][100] = {"Bangladesh", "India", "Pakistan", "Sri Lanka", "Nepal", "Bhutan", "Maldives"};
+    int row, col, name_length;
+
+    for (row = 0; row < 7; row++)
+    {
+        name_length = strlen(saarc[row]);
+
+        for(col = 0; col < name_length; col++)
+        {
+            printf("(%d, %d) = %c\n", row, col, saarc[row][col]);
+        }
+        printf("\n\n");
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//11.6
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    int ara1[5][5] = {{1, 2, 3, 4, 5}, {10, 20, 30, 40, 50}, {100, 200, 300, 400, 500}, {1000, 2000, 3000, 4000, 5000}, {10000, 20000, 30000, 40000, 50000}};
+    int ara2[5][5];
+    int r, c;
+
+    printf("Content of first array (ara1): \n");
+
+    for (r = 0; r < 5; r++)
+    {
+        for(c = 0; c < 5; c++)
+        {
+            printf("%d ", ara1[r][c]);
+        }
+        printf("\n");
+    }
+
+    printf("\n");
+
+    for (r = 0; r < 5; r++)
+    {
+        for(c = 0; c < 5; c++)
+        {
+            ara2[c][r] = ara1[r][c];
+        }
+    }
+
+    printf("Content of second array (ara2): \n");
+
+    for (r = 0; r < 5; r++)
+    {
+        for(c = 0; c < 5; c++)
+        {
+            printf("%d ", ara2[r][c]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 11.6 + prob given by subeen's book 2d array grid
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    int ara1[5][5] = {{1, 2, 3, 4, 5}, {10, 20, 30, 40, 50}, {100, 200, 300, 400, 500}, {1000, 2000, 3000, 4000, 5000}, {10000, 20000, 30000, 40000, 50000}};
+    int ara2[5][5];
+    int row_sum_ara1[5] = {0}; // Initialize row sum array for ara1
+    int col_sum_ara1[5] = {0}; // Initialize column sum array for ara1
+    int row_sum_ara2[5] = {0}; // Initialize row sum array for ara2
+    int col_sum_ara2[5] = {0}; // Initialize column sum array for ara2
+    int r, c;
+
+    printf("Content of first array (ara1):\n");
+
+    // Print content of ara1 and calculate row sums and column sums
+    for (r = 0; r < 5; r++) {
+        for (c = 0; c < 5; c++) {
+            printf("%d ", ara1[r][c]);
+            row_sum_ara1[r] += ara1[r][c];
+            col_sum_ara1[c] += ara1[r][c];
+        }
+        printf(" Row Sum: %d\n", row_sum_ara1[r]);
+    }
+
+    printf("\n");
+
+    // Transpose ara1 to ara2 and calculate row sums and column sums for ara2
+    for (r = 0; r < 5; r++) {
+        for (c = 0; c < 5; c++) {
+            ara2[c][r] = ara1[r][c];
+            row_sum_ara2[c] += ara2[c][r];
+            col_sum_ara2[r] += ara2[c][r];
+        }
+    }
+
+    printf("Content of second array (ara2):\n");
+
+    // Print content of ara2 and calculate row sums and column sums
+    for (r = 0; r < 5; r++) {
+        for (c = 0; c < 5; c++) {
+            printf("%d ", ara2[r][c]);
+        }
+        printf(" Row Sum: %d\n", row_sum_ara2[r]);
+    }
+
+    printf("\n");
+
+    // Print column sums for both arrays
+    printf("Column Sums for ara1:\n");
+    for (c = 0; c < 5; c++) {
+        printf("%d ", col_sum_ara1[c]);
+    }
+    printf("\n");
+
+    printf("Column Sums for ara2:\n");
+    for (c = 0; c < 5; c++) {
+        printf("%d ", col_sum_ara2[c]);
+    }
+    printf("\n");
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 12.1 code but there's a lil bug here cause we're not getting actual decimal value. it's cause inloop there should be decimal += (binary[i]-'0') * pow(2, power)
+#include<stdio.h>
+#include<string.h>
+#include<math.h>
+
+int main()
+{
+    char binary[65];
+    int len, decimal, power, i;
+
+    printf("Enter Binary Number : ");
+    scanf("%s", binary); // if we use &binary here then typically means you are trying to get the address of the entire array
+
+    decimal = 0;
+
+    len = strlen(binary);
+
+    power = len - 1;
+
+    for(i=0;i<len; i++)
+    {
+        decimal += pow(2,power);
+        power--;
+    }
+
+    printf("Decimal value is : %d\n", decimal);
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 12.1 corrected
+#include<stdio.h>
+#include<string.h>
+#include<math.h>
+
+int main()
+{
+    char binary[65];
+    int length, position, i, decimal;
+
+    printf("Enter Binary Number : ");
+    scanf("%s", binary);
+
+    decimal = 0;
+    length = strlen(binary);
+    position = length - 1;
+
+    for(i=0; i<length; i++)
+    {
+        // Convert the character '0' or '1' to its integer value by subtracting '0'
+        decimal += (binary[i] - '0') * pow(2, position);   // in binary[i], 0 means 48 and 1 means 49 understood by computer so  '0 ' – '0 ' = 4 8 – 4 8 = 0 and here '1 ' – '0 ' = 4 9 – 4 8 = 1
+        position--;
+    }
+    printf("Decimal Value : %d\n", decimal);
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// decimal to binary
+#include <stdio.h>
+
+int main() {
+    int decimalNumber = 95;
+    int binary[32]; // Assuming 32-bit binary representation is sufficient
+
+    int i = 0;
+    while (decimalNumber > 0)
+    {
+        binary[i] = decimalNumber % 2;
+        decimalNumber /= 2;
+        i++;
+    }
+
+    printf("Binary representation of 95 is: ");
+    if (i == 0)
+    {
+        printf("0");
+    }
+    else
+    {
+        for (int j = i - 1; j >= 0; j--)
+        {
+            printf("%d", binary[j]);
+        }
+    }
+    printf("\n");
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// decimal to binary with a function
+
+#include <stdio.h>
+void decimalToBinary(int decimalNumber)
+{
+    int binary[32]; // Assuming 32-bit binary representation is sufficient
+    int i = 0;
+
+    // Convert decimal to binary
+    while (decimalNumber > 0)
+    {
+        binary[i] = decimalNumber % 2;
+        decimalNumber /= 2;
+        i++;
+    }
+
+    // Print binary representation
+    printf("Binary representation is: ");
+    if (i == 0)
+    {
+        printf("0");
+    }
+    else
+    {
+        for (int j = i - 1; j >= 0; j--)
+        {
+            printf("%d", binary[j]);
+        }
+    }
+    printf("\n");
+}
+
+int main()
+{
+    int decimalNumber = 95;
+    decimalToBinary(decimalNumber);
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// problem solving ch-13 and more
+
+
+
+
+//square shape
+#include<stdio.h>
+int main()
+{
+    int i,j,n;
+    scanf("%d", &n);
+    printf("\n");
+
+    for(i=1; i<=n; i++)
+    {
+        for(j=1; j<=n; j++)
+        {
+            printf("* ");
+        }
+        printf("\n");
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//right half pyramid shape
+#include<stdio.h>
+int main()
+{
+    int i,j,n;
+    scanf("%d", &n);
+    printf("\n");
+
+    for(i=1; i<=n; i++)
+    {
+        for(j=1; j<=i; j++)
+        {
+            printf("* ");
+        }
+        printf("\n");
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//pic 13.1 subben's book
+
+#include<stdio.h>
+int main()
+{
+    int i,j,n;
+    scanf("%d", &n);
+    printf("\n");
+
+    for(i=1; i<=n; i++)
+    {
+        for(j=0; j<=n-i; j++)
+        {
+            printf("c ");
+        }
+        printf("\n");
+    }
+
+    for(i=1; i<n; i++)
+    {
+        for(j=1; j<=i+1; j++)
+        {
+            printf("c ");
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//pic 13.3 pattern from subeen's book
+#include<stdio.h>
+int main()
+{
+    int i,j,rows;
+    scanf("%d", &rows);
+    printf("\n");
+
+    for(i=0; i<=rows; i++)
+    {
+        for(j=0; j<=i; j++)
+        {
+            printf(" ");
+        }
+        for(j=0; j<=rows-i; j++)
+        {
+            printf("c");
+        }
+        printf("\n");
+    }
+
+    for(i=1; i<=rows; i++)
+    {
+        for(j=0; j<=rows-i; j++)
+        {
+            printf(" ");
+        }
+        for(j=0; j<=i; j++)
+        {
+            printf("c");
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//13.1 code of subeen
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    char word[80], reverse_word[80];
+    int i, j, len;
+    scanf("%s", word);
+    len = strlen(word);
+
+    for(i = 0, j = len - 1; i < len; i++, j--)
+    {
+        reverse_word[i] = word[j];
+    }
+    reverse_word[i] = '\0';
+    printf("%s\n", reverse_word);
+
+    if (0 == strcmp(word, reverse_word))
+    {
+        printf("%s is a palindrome.\n", word);
+    }
+    else
+    {
+        printf("%s is not a palindrome.\n", word);
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//13.1 code without 2nd array(better way)
+
+#include <stdio.h>
+
+int main() {
+    char string[40];
+    int length = 0, flag = 1, i;
+
+    printf("Enter string:\n");
+    gets(string); // Read the input string
+
+    // Calculate the length of the input string
+    for (i = 0; string[i] != '\0'; i++) {
+        length++;
+    }
+
+    // Compare characters from both ends of the string
+    for (i = 0; i < length / 2; i++) {
+        if (string[i] != string[length - 1 - i]) {
+            flag = 0;
+            break;
+        }
+    }
+
+    if (flag == 1) {
+        printf("PALINDROME\n");
+    } else {
+        printf("NOT PALINDROME\n");
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 13.1 code with string functions easy way
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+   char string[100], rev_string[100];
+
+   printf("Enter a string: ");
+   gets(string);
+
+   strcpy(rev_string, string);
+   strrev(rev_string);
+
+   if(strcmp(string, rev_string) == 0)
+      printf("%s is a palindrome string.\n", string);
+   else
+      printf("%s is not a palindrome string.\n", string);
+
+   return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char s[100], r[100];
+
+    printf("enter a string: ");
+    gets(s);
+
+    strcpy(r,s);
+
+    strrev(r);
+
+    if(strcmp(s, r) == 0)
+    {
+        printf("%s is a Palindrome String!!!\n", s);
+    }
+    else
+    {
+        printf("%s is NOT a Palindrome String!\n", s);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//palindrome number
+#include <stdio.h>
+int main() {
+  int n, reversed = 0, original;
+    printf("Enter an integer: ");
+    scanf("%d", &n);
+    original = n;
+
+    while (n != 0)
+    {
+        reversed = reversed * 10 + (n%10);
+        n /= 10;
+    }
+
+    if (original == reversed)
+        printf("%d is a palindrome.", original);
+    else
+        printf("%d is not a palindrome.", original);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+// factorial number in an easy way
+#include <stdio.h>
+
+int main()
+{
+    int i, number, factorial = 1;
+
+    printf("Enter a number: ");
+    scanf("%d", &number);
+
+    // Calculating factorial
+    for(i = 1; i <= number; i++)  // we can use ++i .... using ++i can be slightly more efficient in certain contexts because it doesn't involve creating a temporary copy of i as i++ does.
+    {
+        factorial *= i;
+    }
+
+    printf("Factorial of %d = %d\n", number, factorial);
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int main() {
+    int number;
+    unsigned long long factorial = 1;
+
+    printf("Enter a number: ");
+    scanf("%d", &number);
+
+    // Calculating factorial
+    for(int i = 1; i <= number; ++i) {
+        factorial *= i;
+    }
+
+    printf("Factorial of %d = %llu\n", number, factorial);
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//13.4 code robot 2d grid
+#include <stdio.h>
+int main()
+{
+    int x, y;
+    char c;
+
+    printf("Please enter the initial position: ");
+    scanf("%d %d", &x, &y);
+
+    printf("\n");
+
+    while (1)
+    {
+        scanf("%c", &c);
+
+        if (c == 'S')
+        {
+            break;
+        }
+
+        else if (c == 'U')
+        {
+            x--;
+        }
+
+        else if (c == 'D')
+        {
+            x++;
+        }
+        else if (c == 'R')
+        {
+            y++;
+        }
+        else if (c == 'L')
+        {
+            y--;
+        }
+    }
+    printf("\n");
+    printf("Final position of the robot is: %d, %d\n", x, y);
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+#define MAX_MOVES 100
+
+int main() {
+    int x = 0, y = 0;
+    char moves[MAX_MOVES];
+    int i = 0;
+
+    printf("Please enter the initial position: ");
+    scanf("%d %d", &x, &y);
+
+    printf("\n");
+    printf("Enter the sequence of moves (U, D, L, R). Enter 'S' to stop: ");
+
+    // Read moves until 'S' or maximum number of moves is reached
+    while (i < MAX_MOVES && scanf(" %c", &moves[i]) == 1 && moves[i] != 'S') {
+        i++;
+    }
+
+    // Perform moves
+    for (int j = 0; j < i; j++) {
+        if (moves[j] == 'U') x--;
+        else if (moves[j] == 'D') x++;
+        else if (moves[j] == 'R') y++;
+        else if (moves[j] == 'L') y--;
+    }
+
+    printf("\n");
+    printf("Final position of the robot is: %d, %d\n", x, y);
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//13.4 code robot 2d grid in short
+
+#include <stdio.h>
+
+int main() {
+    int x = 0, y = 0;
+    char c;
+
+    printf("Please enter the initial position: ");
+    scanf("%d %d", &x, &y);
+
+    printf("\n");
+
+    while (scanf(" %c", &c) == 1 && c != 'S')
+    {
+        if (c == 'U') x--;
+        else if (c == 'D') x++;
+        else if (c == 'R') y++;
+        else if (c == 'L') y--;
+    }
+
+    printf("\n");
+    printf("Final position of the robot is: %d, %d\n", x, y);
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int main() {
+    int x = 10;
+    int *ptr = &x;
+
+    printf("%d\n", ptr); //garbage value
+    printf("%p\n", ptr);  // memory address
+
+    printf("%d\n", &x);  // garbage value
+    printf("%p\n", &x);    // memory address
+
+    printf("%d\n", x); //output 10
+    printf("%p\n", x);  // garbage value
+
+    printf("%d\n", *ptr); // output 10
+    printf("%p\n", *ptr); // arbage value cause of format speifier
+
+    printf("%d\n", ++*ptr);  // tricky ques output will be 11 cause incremented the value
+    printf("%d\n", --*ptr);  // output 10 cause dcreamented 1 from 11 from upper line
+    printf("%d\n", --*ptr);  // memory address
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int main() {
+    int x = 5;
+    printf("%d %d %d", x++, ++x, x++);  // output 7 8 5
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int main() {
+    int x = 5;
+    printf("%d %d %d\n", x++, ++x, x);  // output 6 7 7
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+*/
+
+#include <stdio.h>
+
+int main() {
+    int x = 5;
+    printf("%d\n", x++ + ++x);
+    return 0;
+}
